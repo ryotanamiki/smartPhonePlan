@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns#">
+    <!-- 共通 -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common2.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/pc.css">
+    <link rel="stylesheet" type="text/css" href="css/smp.css">
+    <link rel="stylesheet" type="text/css" href="css/pc_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/smp_menu.css">
+    <script src="/script/jquery-3.4.1.min.js"></script>
+    <!-- /共通 -->
+
+    <link rel="stylesheet" type="text/css" href="css/simulation.css">
+    <meta http-equiv="x-ua-compatible" content="IE=11">
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11">
+
+    <title>料金プランかんたん診断｜格安SIM/格安スマホのIIJmio</title>
+    <meta name="description" content="最大4つの質問に答えるだけで、新プラン「ギガプラン」からあなたにピッタリな料金プランをご提案！ご家族でお乗り換えされる場合の料金シミュレーションも行えます。">
+    <meta name="keywords"
+        value="シミュレーション,乗り換え,診断,料金,安い,プラン,スマホ,スマートフォン,格安SIM,格安スマホ,IIJmio,IIJ,mio,アイアイジェイミオ,アイアイ ジェイ,ギガプラン,新プラン,みおふぉん">
+
+    <script src="/include2/includeNewHead.js"></script><!-- include head -->
+    <script src="/script/chatbot_popup.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/gaiyo.css" />
+    <script src="/campaign/js/jkl-parsexml.js"></script>
+    <script src="/campaign/js/overviewCsv.js"></script>
+    <script src="/script/util.js" type="text/javascript"></script>
+</head>
+
+<body data-twttr-rendered="true" style="display:none;">
+    <div id="google-tag-manager-body"></div><!-- include google-tag-manager-body -->
+    <div id="wrapper">
+        <div id="global-menu"></div><!-- include global-menu -->
+
+        <div class="mainArea">
+            <div id="pankuzu"></div><!-- include pankuzu -->
+
+            <!-- シュミレータ -->
+            <div id="giga_simulator"></div>
+            <!-- 申し込みボタン -->
+            <section id="btn_area">
+                <section class="">
+                    <div class="application-btn lazyshow">
+                        <a href="/mobile/signup/"><strong>ギガプランのご購入・<br class="sp">お申し込みはこちら</strong></a>
+                    </div>
+                    <div class="anno-link Period" start="20200728" end="20220601">
+                        <a class="ar_link" href="/hdd/signup/">ミニマムスタート・ライトスタート・ファミリーシェア・ケータイプランをお申し込みの方はこちら</a>
+                    </div>
+                    <div class="anno-link notPeriod" end="20220601">
+                        <a class="ar_link" href="/hdd/signup/">ミニマムスタート・ライトスタート・ファミリーシェアプランをお申し込みの方はこちら</a>
+                    </div>
+                </section>
+            </section>
+            <!-- バナーエリア -->
+            <!-- <div id="gigaplanBanner"></div> -->
+            <div id="bnr_area">
+                <div class="bnr-box">
+                    <div class="bnr-item">
+                        <div id="gigaplanBanner"></div>
+                    </div>
+                    <!-- <a class="bnr-item" href="/gigaplan/">
+                  <img class="sp" src="/image/banner/bnr_gigaplan_sp.png" alt="ギガプラン">
+                  <img class="pc" src="/image/banner/bnr_gigaplan.png" alt="ギガプラン">
+                </a> -->
+                    <a class="bnr-item" href="/imh/miowari.html">
+                        <img class="sp" src="images/bnr_miowari_sp.png" alt="おうちのインターネットもスマホとセットでさらにおトク！">
+                        <img class="pc" src="images/bnr_miowari.png" alt="おうちのインターネットもスマホとセットでさらにおトク！">
+                    </a>
+                </div>
+            </div>
+            <!-- 注記 -->
+            <ul class="annotation_bottom">
+                <li>金額は全て税込で表記しています。</li>
+                <li>記載されている商品名、会社名等は各会社の商号、商標または登録商標です。本文中では&trade;、&reg;マークは表記しておりません。</li>
+                <li>Apple、Appleのロゴ、iPhone、iPad、iPad Pro、AppleCareは米国およびその他の国々で登録されたApple Inc.の商標です。 iPhone
+                    商標は、アイホン株式会社のライセンスに基づき使用されています。</li>
+            </ul>
+            <!-- footer注釈-->
+            <div id="footer-anno"></div>
+        </div><!-- mainArea -->
+        <div id="footer"></div><!-- include footer -->
+
+    </div>
+    <!-- /#wrapper -->
+    <script>
+        // スクリプト内部のアンカーリンク調整
+        // 読み込みページごとに上書きで調整する
+        var pcAdjust = 60;
+        var spAdjust = 0;
+        // 初期処理後に表示したいので一時的に非表示にする
+        $(".mainArea").css('opacity', '0')
+        // 開くトグルを非表示設定
+        var openBtnNone = true;
+        $(function () {
+            // 起動時に開く
+            function simuInit() {
+                setTimeout(function () {
+                    // トグルを開く
+                    $("#toggle_open").trigger('click');
+                    setTimeout(function () {
+                        // コンテンツを表示
+                        $(".mainArea").addClass('fadein')
+                    }, 500);
+                }, 500);
+            }
+            // UIパーツ読み込み
+            htmlPartsInclude('#giga_simulator', '/gigaplan/include/gigaSimulator2.html', simuInit);
+        })
+        setTimeout(function () {
+            $(function () {
+                $(' a.page_link[href^="#"]').click(function () {
+                    var speed = 1000;
+                    var href = $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top - 120;
+                    if (window.matchMedia("(max-width: 640px)").matches) {
+                        var position = target.offset().top - 80;
+                    }
+                    $('body,html').animate({ scrollTop: position }, speed, 'easeInOutQuint');//easeInOutQuint   easeOutQuart
+                    return false;
+                });
+            });
+        }, 3000);
+    </script>
+
+    <!-- Accesstrade Tracking Tag -->
+    <script src="https://h.accesstrade.net/js/nct/lp.min.js"></script>
+    <!-- End Accesstrade Tracking Tag -->
+
+    <!-- START include -->
+    <script src="/gigaplan/include/gigaSimulator2.js"></script>
+    <script src="/include2/includeGoogleTagManagerBody.js"></script>
+    <script src="/include2/includeGlobalMenu.js"></script>
+    <script src="/include2/includePankuzu.js"></script>
+    <script src="/include2/includeBanner.js"></script>
+    <script src="/include2/includeFooter.js"></script>
+
+    <!-- END include -->
+    <script src="/script/cptagname.js"></script>
+    <script src="/script/cptag.js"></script>
+    <script>
+        setTimeout(function () {
+            // PC,SPごとにヘッダの高さを考慮
+            let margin = ($(window).width() >= 960) ? 100 : 60;
+            $(function () {
+                // 別ページからのアンカーリンク
+                url = window.location.toString();
+                anc = url.substring(url.search('#') + 1);
+                if (url.search('#') !== -1 && anc) {
+                    var Hash = $("#" + anc);
+                    var HashOffset = $(Hash).offset().top - margin;
+                    jQuery("html,body").animate({
+                        scrollTop: HashOffset
+                    }, 500);
+                }
+            });
+            $(function () {
+                // スムーズスライダー + 画面内リンクの位置調整
+                $(' a[href^="#"]').click(function () {
+                    var speed = 500;
+                    var href = $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top - margin;
+                    $('body,html').animate({
+                        scrollTop: position
+                    }, speed, 'easeInOutQuint');
+                    return false;
+                });
+            });
+        }, 3000);
+    </script>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                htmlPartsInclude('#gigaplanBanner', '/include2/gigaplan-banner.html');
+                $.getScript('/script/cptagNewV1.js');
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,923 @@
+@charset "utf-8";
+@media screen and (max-width: 640px) {
+    html {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        -webkit-text-size-adjust: 100%;
+        /*?*/
+        _font-size: 100%;
+        /**/
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        height: 100%;
+        background-color: #fff;
+        color: #555;
+        margin: 0;
+        padding: 0;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    img {
+        border: 0px;
+        vertical-align: top;
+    }
+
+    p {
+        line-height: 1.4em;
+    }
+
+    .clear {
+        clear: both;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    ul ol li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        list-style: none;
+        list-style-type: none;
+    }
+
+    .clearfix {
+        display: inline-block;
+    }
+
+    /* exlude MacIE5 ?*/
+    * html .clearfix {
+        height: 1%
+    }
+
+    .clearfix {
+        display: block;
+    }
+
+    /* end MacIE5 */
+    /*
+Module ----------------------------------------*/
+    .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        display: inline-block;
+    }
+
+    /* exlude MacIE5 ?*/
+    * html .clearfix {
+        height: 1%
+    }
+
+    .clearfix {
+        display: block;
+    }
+
+    /* end MacIE5 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .pagination {
+        top: 0px;
+        left: 0;
+        padding-top: 5px;
+        width: 100%;
+        height: 15px;
+        text-align: center;
+        position: relative;
+        z-index: 200;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    /*
+base ----------------------------------------*/
+    #headerScroll {
+        display: none;
+    }
+
+    #headerFixed {
+        display: none;
+    }
+
+    #mainVisual {
+        margin: 65px auto 0;
+    }
+
+    #headerSmall {
+        display: block;
+        width: 100%;
+        height: 45px;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    #headerSmall .logo {
+        float: left;
+        padding: 5px 0 0 5px;
+        width: 88px;
+    }
+
+    #headerSmall .logo img {
+        width: 100%;
+    }
+
+    #headerSmall .menuBtn {
+        position: absolute;
+        right: 0px;
+    }
+
+    #gnavSmall {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        top: 65px;
+        left: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    #gnavSmall ul.menu {
+        padding: 33px 26px 0;
+    }
+
+    #gnavSmall ul.menu li {
+        font-family: "PFDinTextStd-Medium", sans-serif;
+        font-size: 116%;
+        letter-spacing: 1px;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    #gnavSmall ul.menu li:last-child {
+        margin-bottom: 22px;
+    }
+
+    #gnavSmall .gnavSns {
+        width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+        padding: 5px 0 7px;
+    }
+
+    #gnavSmall .gnavSns ul {
+        width: 224px;
+        margin: 0 auto;
+    }
+
+    #gnavSmall .gnavSns ul li {
+        float: left;
+        text-align: left;
+        margin-left: 16px;
+    }
+
+    #gnavSmall .gnavSns ul li:first-child {
+        margin-left: 0px;
+    }
+
+    .ipv6_sp {
+        float: right;
+        margin-right: 55px;
+        margin-top: 10px;
+    }
+
+    .sp_r_login #login_sp,
+    .sp_r_login #logout_sp {
+        float: right;
+        margin: 5px;
+        width: 95%;
+    }
+
+    .sp_r_login #login_sp img,
+    .sp_r_login #logout_sp img {
+        float: right;
+    }
+
+    .sp_r_login #login_sp div.username {
+        float: right;
+        width: 55%;
+        font-size: 80%;
+        text-align: right;
+        margin: 0px 6px 0 0;
+    }
+
+    .sp_r_login #login_sp .icon_mail {
+        float: right;
+        margin: 2px 8px 0 0;
+    }
+
+    #footer .footer_body {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0px;
+    }
+
+    #footer .footer_main1 .footer_map {
+        float: left;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    /*アコーディオン*/
+    #right-menu {
+        text-decoration: none;
+        width: 45px;
+        border-radius: 5px;
+        display: block;
+    }
+
+    user agent stylesheeta:-webkit-any-link {
+        color: -webkit-link;
+        text-decoration: underline;
+        cursor: auto;
+    }
+
+    /*アコーディオン*/
+    #wrapper {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    #wrapper_inner {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #wrapper_inner2 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #wrapper_inner3 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #wrapper_inner4 {
+        width: 95%;
+        margin: 0 auto 0 auto;
+    }
+
+    #header h1 {
+        display: block;
+        float: left;
+        width: 25%;
+    }
+
+    #header .menu01 {
+        display: block;
+        float: left;
+        width: 25%;
+        padding-top: 10px;
+    }
+
+    #header .menu02 {
+        display: block;
+        float: left;
+        width: 30%;
+        padding-top: 10px;
+    }
+
+    #header .menu03 {
+        display: block;
+        float: left;
+        width: 20%
+    }
+
+    #copy {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    #copy2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    #mainvisual {
+        clear: both;
+    }
+
+    #mainvisual p {
+        display: none;
+    }
+
+    .points_inner {
+        text-align: center;
+    }
+
+    #points img {
+        width: 80%;
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+
+    #points p {
+        font-size: 16px;
+        color: #00afec;
+        font-weight: bold;
+        padding: 3px 0 10px 0;
+    }
+
+    #sec01 h2 {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    #sec01 .h2text {
+        padding: 10px 0 25px 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .sec01a_pc {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .sec01b {
+        background-color: #e2e8f4;
+        width: auto;
+        margin: 0 auto;
+        padding: 12px;
+    }
+
+    .sec01b_inner {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .sec01b_left {
+        width: auto;
+        float: none;
+        background: #fff;
+        text-align: center;
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    .sec01b_right {
+        width: auto;
+        float: none;
+        background: #fff;
+        text-align: center;
+        height: auto;
+    }
+
+    .sec01b_right p {
+        padding: 5px 0 10px 0;
+    }
+
+    .sec01c_pc {
+        clear: both;
+        text-align: center;
+        padding: 16px 0 0 0;
+    }
+
+    #sec01_2 {
+        width: 100%;
+    }
+
+    #sec01_2 h2 {
+        text-align: center;
+        padding: 0px 0px 0px 0px;
+    }
+
+    #sec01_2 p {
+        font-size: 11px;
+        color: #626262;
+    }
+
+    .sec01_2a_pc {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .sec01_2b {
+        background: url(/images/sec-bg.jpg);
+        width: 960px;
+        height: 80px;
+    }
+
+    .sec01_2b_inner {
+        width: 836px;
+        margin: 0 auto;
+    }
+
+    .sec01_2b_left {
+        width: 412px;
+        float: left;
+        background: #fff;
+        text-align: center;
+        height: 346px;
+    }
+
+    .sec01_2b_right {
+        width: 412px;
+        float: right;
+        background: #fff;
+        text-align: center;
+        height: 346px;
+    }
+
+    .sec01_2b_right p {
+        padding: 5px 0 10px 0;
+    }
+
+    .sec01_2c_pc {
+        clear: both;
+        text-align: center;
+        padding: 16px 0 0 0;
+    }
+
+    #copy {
+        padding: 0px 0;
+    }
+
+    #copy_smp {
+        padding: 10px 0 0 0;
+    }
+
+    .points_inner_2 {
+        text-align: center;
+    }
+
+    .point2box {
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .point3box {
+        padding-top: 20px;
+    }
+
+    .point3box_txt {
+        width: 250px;
+        float: left;
+        margin: 20px auto 20px auto;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        text-align: left;
+        font-size: 13px;
+        position: relative;
+        top: 0px;
+        left: 55px;
+        line-height: 18px;
+    }
+
+    .point3box_txt2 {
+        text-indent: 0px;
+    }
+
+    .point3box_sqr {
+        float: left;
+        position: relative;
+        top: 25px;
+        left: 55px;
+    }
+
+    .points_inner_2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .point1box_2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .point2box_2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .point3box_2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .point4box_2 {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    #points2_copy_smp {
+        text-align: center;
+        background: url(/images/copy2-bg.jpg);
+        width: 100%;
+        height: 140px;
+        background-repeat: repeat-x;
+    }
+
+    #points2_line_1_smp {
+        text-align: center;
+        background: url(/images/dotline-01.jpg);
+        width: 100%;
+        height: 1px;
+        background-repeat: repeat-x;
+    }
+
+    #points2_line_2_smp {
+        text-align: center;
+        background: url(/images/dotline-02.jpg);
+        width: 100%;
+        height: 1px;
+        background-repeat: repeat-x;
+    }
+
+    #points2_line_3_smp {
+        text-align: center;
+        background: url(/images/dotline-03.jpg);
+        width: 100%;
+        height: 1px;
+        background-repeat: repeat-x;
+    }
+
+    #points2_line_4_smp {
+        text-align: center;
+        background: url(/images/dotline-04.jpg);
+        width: 100%;
+        height: 1px;
+        background-repeat: repeat-x;
+    }
+
+    .points_inner_3 {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        left: 0px;
+        top: -42px;
+    }
+
+    .point1box_3 {
+        padding: 0px 0 0px 0;
+    }
+
+    .point2box_3 {
+        padding: 0px 0 0px 0;
+        position: relative;
+        left: 0px;
+        top: -22px;
+    }
+
+    .point3box_3 {
+        padding: 0px 0 0px 0;
+        position: relative;
+        left: 0px;
+        top: -42px;
+    }
+
+    .point1box_3_btn {
+        position: relative;
+        left: 0px;
+        top: 230px;
+    }
+
+    .point2box_3_btn {
+        position: relative;
+        left: 0px;
+        top: 230px;
+    }
+
+    .point3box_3_btn {
+        position: relative;
+        left: 0px;
+        top: 230px;
+    }
+
+    .QA_inner {
+        text-align: center;
+    }
+
+    .QAbox {
+        width: 100%;
+        float: left;
+        padding: 30px 0 40px 0;
+    }
+
+    .QAbox2 {
+        width: 100%;
+        float: left;
+        padding: 30px 0 40px 0;
+    }
+
+    .QAbox_inner {
+        width: 100%;
+        margin: 10px auto;
+        border-bottom: 1px dotted #c9c9c9;
+    }
+
+    .QAbox_txt {
+        width: 100%;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        text-align: left;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .QAbox_txt2 {
+        text-indent: 0px;
+    }
+
+    .QAbox_Q {
+        float: left;
+        position: relative;
+        top: 0px;
+    }
+
+    .QAbox_TITLE {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #sec02 h2 {
+        text-align: center;
+        padding-bottom: 0;
+        display: block;
+    }
+
+    #sec02 h3 {
+        font-size: 16px;
+        color: #00afec;
+        padding: 5px 0;
+    }
+
+    #sec02 .tablebox {
+        margin: 0 auto;
+    }
+
+    #sec02 table {
+        width: 100%;
+    }
+
+    #sec02 table tr.odd {
+        background: #eaf6fd;
+    }
+
+    #sec02 table th {
+        padding: 8px 0 8px 8px;
+        text-align: left;
+        width: 33%;
+        text-indent: 0;
+    }
+
+    #sec02 table td {
+        padding: 8px 0;
+    }
+
+    .likeh3 {
+        padding-bottom: 20px;
+    }
+
+    .likeh3 a {
+        font-size: 16px;
+        color: #00afec;
+        padding: 5px 0;
+        text-decoration: underline;
+    }
+
+    #contact {
+        text-align: center;
+    }
+
+    #contact a {
+        color: #6673b5;
+    }
+
+    #contact span {
+        display: block;
+        text-align: left;
+    }
+
+    .aboutiijmio {
+        padding: 31px 10px 8px 10px;
+    }
+
+    .ptext {
+        padding: 20px 0;
+    }
+
+    #sec03 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    #sec04 {
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .smp02 {
+        width: 70%;
+        display: block;
+        margin: 10px auto 0 auto;
+    }
+
+    .goghh2mini {
+        display: block;
+        margin: 10px auto 0 auto;
+        text-align: center;
+    }
+
+    /*
+main menu----------------------------------------*/
+    li {
+        list-style: none;
+    }
+
+    .sp_nav_2nd {
+        margin-top: 1px;
+        border-top: 1px solid #e2e2e2;
+    }
+
+    .sp_nav_2nd li {
+        margin-bottom: 1px;
+        border-bottom: 1px solid #e2e2e2;
+        background: #FFF url(/image/sp_topmenu_icon_right.png) 95% center no-repeat;
+    }
+
+    .sp_nav_2nd li a {
+        display: flex;
+        align-items: center;
+        font-size: 6vw;
+        padding: 0.5rem;
+        color: #333;
+    }
+
+    .sp_nav_2nd li a:hover {
+        color: #e7198c;
+    }
+
+    .sp_nav_icon {
+        width: 10vw;
+        padding-right: 3vw;
+    }
+
+    .cv_btn {
+        width: 95%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /*
+content ----------------------------------------*/
+    .gototop {
+        text-align: right;
+        position: relative;
+        left: -10px;
+        top: -25px;
+    }
+
+    .gototop2 {
+        text-align: right;
+        position: relative;
+        left: -5px;
+        top: 15px;
+    }
+
+    /*
+clearfix ----------------------------------------*/
+    .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        display: inline-block;
+    }
+
+    /*exlude MacIE5 ?*/
+    * html .clearfix {
+        height: 1%
+    }
+
+    .clearfix {
+        display: block;
+    }
+
+    /*end MacIE5 */
+    #contents:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    #contents {
+        display: inline-block;
+    }
+
+    /*exlude MacIE5 ?*/
+    * html #contents {
+        height: 1%
+    }
+
+    #contents {
+        display: block;
+    }
+
+    /*end MacIE5 */
+    /*
+Module ----------------------------------------*/
+    .tac {
+        text-align: center;
+    }
+
+    .tar {
+        text-align: right;
+    }
+
+    .rtbnr {
+        padding-bottom: 11px;
+    }
+
+    .rtbnr2 {
+        padding-bottom: 11px;
+        margin-right: 11px;
+        text-align: center;
+    }
+
+    .bnr {
+        padding-bottom: 6px;
+    }
+
+    .red {
+        color: #e23333;
+    }
+
+    .fw_b {
+        font-weight: bold;
+    }
+
+    .fontChanger p {
+        display: inline;
+    }
+
+    .small {
+        font-size: 70%;
+    }
+
+    .medium {
+        font-size: 80%;
+    }
+
+    .large {
+        font-size: 110%;
+    }
+
+    .smp_off {
+        display: none !important;
+    }
+
+    .pc_off_btn img {
+        width: 100%;
+        margin-left: -0.5%;
+    }
+
+    /*
+20141104--------------*/

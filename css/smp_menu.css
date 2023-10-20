@@ -1,0 +1,614 @@
+@media screen and (max-width: 640px) {
+
+    /* #nav-toggle デフォルト */
+    #nav-toggle {
+        display: none;
+        cursor: pointer;
+        cursor: pointer;
+        height: 36px;
+        position: absolute;
+        right: 12px;
+        top: 14px;
+        width: 34px;
+        z-index: 101;
+    }
+
+    #nav-toggle span:nth-child(1) {
+        top: 0;
+    }
+
+    #nav-toggle span:nth-child(2) {
+        top: 11px;
+    }
+
+    #nav-toggle span:nth-child(3) {
+        top: 22px;
+    }
+
+    #nav-toggle span {
+        background: #666 none repeat scroll 0 0;
+        display: block;
+        height: 4px;
+        position: absolute;
+        right: 10px;
+        transition: all 0.35s ease-in-out 0s;
+        width: 30px;
+    }
+
+    /* #nav-toggle 切り替えアニメーション */
+    .open #nav-toggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform: rotate(315deg);
+        -moz-transform: rotate(315deg);
+        transform: rotate(315deg);
+    }
+
+    .open #nav-toggle span:nth-child(2) {
+        display: none;
+    }
+
+    .open #nav-toggle span:nth-child(3) {
+        top: 11px;
+        -webkit-transform: rotate(-315deg);
+        -moz-transform: rotate(-315deg);
+        transform: rotate(-315deg);
+    }
+
+    #global-nav {
+        display: none;
+    }
+
+    #global-nav ul {
+        list-style: none;
+        position: static;
+        right: 0;
+        bottom: 0;
+        font-size: 14px;
+    }
+
+    #global-nav ul li p {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 0;
+    }
+
+    /* #global-nav スライドアニメーション */
+    .open #global-nav {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    /* ======================================
+
+アコーディオン
+
+======================================= */
+    ul.accordion {
+        margin: 0 auto 30px;
+    }
+
+    ul.accordion a {
+        color: #333;
+        display: block;
+        padding: 10px 0 10px 35px;
+    }
+
+    ul.accordion span,
+    .accordion li p a.nav01 {
+        color: #333;
+        cursor: pointer;
+        display: block;
+        padding: 10px 5px 5px 50px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    ul.accordion ul {
+        display: none;
+    }
+
+    .accordion li p {
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* #global-nav メニューアイコン */
+    .accordion li p a.nav01 {
+        background: url("/image/sp-nav01.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    .accordion li p span.nav02 {
+        background: url("/image/sp-nav02.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    .accordion li p span.nav03 {
+        background: url("/image/sp-nav03.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    .accordion li p span.nav04 {
+        background: url("/image/sp-nav04.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    .accordion li p span.nav05 {
+        background: url("/image/sp-nav05.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    .accordion li p span:after {
+        background-color: #ddd;
+        border-radius: 3px;
+        content: "+";
+        float: right;
+        padding: 5px 7px;
+        margin-top: -8px;
+        color: #888;
+    }
+
+    .accordion li p span.minus:after {
+        background-color: #ddd;
+        border-radius: 3px;
+        content: "-";
+        float: right;
+        padding: 5px 10px;
+        color: #888;
+    }
+
+    .accordion li ul li {
+        background-color: #ebebeb;
+    }
+
+    .accordion li ul li {
+        border-bottom: 1px solid #fff;
+    }
+
+    .accordion li ul li:last-child {
+        border-bottom: none;
+    }
+
+    .application_btn a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .application_btn p {
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .application_btn p {
+        background: #abcd03;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, #abcd03 0%, #51b32f 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #abcd03 0%, #51b32f 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #abcd03 0%, #51b32f 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    /* スマホヘッダー */
+    #smp-head {
+        background: #fff;
+        width: 100%;
+        z-index: 999;
+        position: relative;
+        height: 56px;
+        line-height: 1.2;
+        font-size: 2.8vw;
+    }
+
+    #headerSmall .logo {
+        width: 20%;
+        margin-right: 3%;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo, Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    }
+
+    #headerSmall .logo.new-logo {
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #headerSmall .logo .logo-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #headerSmall .logo .logo-top .en-link {
+        padding: 3px 5px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    #headerSmall .logo .logo-top .logo-link {
+        width: 53%;
+    }
+
+    #headerSmall .logo .logo-top img.logo {
+        width: 100%;
+    }
+
+    #headerSmall .logo .logo-bottom {
+        text-align: center;
+        padding-top: 7px;
+    }
+
+    #headerSmall .logo .logo-bottom img.ipv6status {
+        width: 80%;
+    }
+
+    #headerSmall {
+        box-sizing: border-box;
+        height: 56px;
+        padding: 5px 5px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ipv6_sp {
+        float: left !important;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+
+    .ipv6-english {
+        font-size: 3vw;
+        width: 30%;
+        margin-right: 1%;
+    }
+
+    .visitors {
+        margin-top: 5px;
+        display: block;
+        color: #7f8cbf !important;
+        padding: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #7f8cbf;
+        text-align: center;
+    }
+
+    .menu-icon.biz-icon img {
+        width: 25px;
+    }
+
+    .menu-icon {
+        width: 15%;
+        text-align: center;
+    }
+
+    .menu-icon.campaign-icon {
+        width: 19%;
+        min-width: 60px;
+    }
+
+    .menu-icon a {
+        display: block;
+        color: #333;
+    }
+
+    .menu-icon img {
+        display: block;
+        width: 25px;
+        margin: auto;
+    }
+
+    .menu-icon.campaign-icon img {
+        margin-bottom: 5px;
+    }
+
+    #sp-globalmenu {
+        z-index: 1000;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 65px;
+        padding-top: 10px;
+        transition: 0.3s;
+        font-size: 3.1vw;
+        font-weight: bold;
+        box-sizing: content-box;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    }
+
+    .sp-globalmenu-inner {
+        padding: 0 3px;
+        width: 80%;
+        position: relative;
+    }
+
+    .sp-globalmenu-inner ul {
+        margin: 0 auto;
+        overflow: hidden;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 10%);
+        display: flex;
+    }
+
+    .sp-globalmenu-inner ul li {
+        text-align: center;
+        width: 20%;
+    }
+
+    .sp-globalmenu-inner ul li a {
+        color: #333;
+        display: block;
+        border-right: 1px solid #ccc;
+        margin: 5px 0;
+        padding: 0 5%;
+    }
+
+    .sp-globalmenu-inner ul li a:hover {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sp-globalmenu-inner ul li a[href="#support-shop"] {
+        border-right: none;
+    }
+
+    .sp-globalmenu-inner ul li a .sp-globalmenu-icon {
+        margin: 0 auto 3px;
+        width: 22px;
+        height: 22px;
+        position: relative;
+    }
+
+    .sp-globalmenu-inner ul li a .sp-globalmenu-icon img {
+        position: relative;
+    }
+
+    .sp-globalmenu-inner ul li a .sp-globalmenu-icon:before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #ec5c9c;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .sp-globalmenu-inner ul li a .sp-globalmenu-icon:after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .sp-globalmenu-inner ul li a.on .sp-globalmenu-icon:before,
+    .sp-globalmenu-inner ul li a.on .sp-globalmenu-icon:after {
+        opacity: 1;
+    }
+
+    .sp-globalmenu-inner ul li a.on .sp-globalmenu-icon img {
+        opacity: 0;
+    }
+
+    /* .sp-globalmenu-inner ul li a[href="/hdc/spec/"] .sp-globalmenu-icon:after {
+    background-image: url(/image/icon_price2_on.png);
+} */
+    .sp-globalmenu-inner ul li a[href="#sim-esim"] .sp-globalmenu-icon:after {
+        background-image: url(/image/icon_sim2_on.png);
+    }
+
+    /* .sp-globalmenu-inner ul li a[href="#device-set"] .sp-globalmenu-icon:after {
+    background-image: url(/image/icon_set_on.png);
+}
+.sp-globalmenu-inner ul li a[href="#mio-imh"] .sp-globalmenu-icon:after {
+    background-image: url(/image/icon_imh_on.png);
+} */
+    .sp-globalmenu-inner ul li a[href="#support-shop"] .sp-globalmenu-icon:after {
+        background-image: url(/image/icon_support_on.png);
+    }
+
+    .sp-globalmenu-inner ul li a p {
+        line-height: 1;
+    }
+
+    .sp-globalmenu-inner ul li a[href="#sim-esim"] p,
+    .sp-globalmenu-inner ul li a[href="/imh/"] p,
+    .sp-globalmenu-inner ul li a[href="#support-shop"] p {
+        letter-spacing: -1px;
+    }
+
+    .sp-globalmenu-inner p {
+        font-size: 3.1vw;
+    }
+
+    .sp-globalmenu-content {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .sp-globalmenu-content-inner {
+        width: 100%;
+        padding: 15px 0 75px;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .sp-globalmenu-content-inner-box {
+        display: none;
+        width: 95%;
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
+        background-color: #fff;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-title img {
+        width: 30px;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-title .sub-title {
+        width: 80%;
+        font-size: 4.5vw;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        margin-bottom: 0;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-subtitle {
+        padding: 8px 10px;
+        border-bottom: 1px solid #d2d2d2;
+        background: #eeeeee;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-subtitle p {
+        padding-left: 10px;
+        background: url(/hdd/img/service-voice-h2-title.jpg) no-repeat center left;
+        font-size: 4vw;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list {
+        font-size: 3.6vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li {
+        width: 50%;
+        height: 40px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #d2d2d2;
+        display: flex;
+        align-items: center;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list.one-line li {
+        width: 100%;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li a {
+        display: block;
+        color: #333;
+        line-height: 1;
+        width: 100%;
+        padding: 12px 9% 10px;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list.one-line li a {
+        padding: 12px 5% 10px;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li:nth-child(odd) {
+        border-right: 1px solid #d2d2d2;
+    }
+
+    .sp-globalmenu-content-inner-box-list li.border-none {
+        border: none !important;
+    }
+
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li span {
+        font-size: 75%;
+    }
+
+    .btn-close-modal {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .btn-close-modal:before,
+    .btn-close-modal:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 12%;
+        margin: -8% 0 0 -42%;
+        background: #a3a3a3;
+    }
+
+    .btn-close-modal:before {
+        transform: rotate(45deg);
+    }
+
+    .btn-close-modal:after {
+        transform: rotate(-45deg);
+    }
+
+    #sp-globalmenu-mask {
+        width: 100%;
+        height: 122%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        display: none;
+    }
+
+    /*チャットボット*/
+    .krkr-button,
+    .krkr-button-img {
+        display: block !important;
+        z-index: 99998;
+        width: 20%;
+        right: 0px !important;
+        bottom: 7px !important;
+    }
+
+    div[aria-hidden='true'] .krkr-button-img {
+        opacity: 0;
+    }
+}
+
+
+/*微調整*/
+
+@media screen and (max-width: 400px) {
+    .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li {
+        height: 35px;
+    }
+}
