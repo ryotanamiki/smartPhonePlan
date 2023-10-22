@@ -84,6 +84,7 @@
 アコーディオン
 
 ======================================= */
+
     ul.accordion {
         margin: 0 auto 30px;
     }
@@ -201,6 +202,7 @@
         background: linear-gradient(to right, #abcd03 0%, #51b32f 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
+
 
     /* スマホヘッダー */
     #smp-head {
@@ -589,6 +591,7 @@
         display: none;
     }
 
+
     /*チャットボット*/
     .krkr-button,
     .krkr-button-img {
@@ -602,11 +605,10 @@
     div[aria-hidden='true'] .krkr-button-img {
         opacity: 0;
     }
+
 }
 
-
 /*微調整*/
-
 @media screen and (max-width: 400px) {
     .sp-globalmenu-content-inner-box .sp-globalmenu-content-inner-box-list li {
         height: 35px;

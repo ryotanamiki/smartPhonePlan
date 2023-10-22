@@ -1,4 +1,4 @@
-    /* .narrow-dot{
+/* .narrow-dot{
   padding-left: 8px;
   position: relative;
 }
@@ -12,22 +12,22 @@
   top: 5%;
 } */
 
-    .narrow-dot {
-        display: inline-block;
-        padding: 0 2px;
-        padding-bottom: 4px;
-    }
+.narrow-dot {
+    display: inline-block;
+    padding: 0 2px;
+    padding-bottom: 4px;
+}
 
-    .narrow-dot .dot-parts {
-        width: 3px;
-        height: 3px;
-        background-color: #333;
-        border-radius: 100%;
-    }
+.narrow-dot .dot-parts {
+    width: 3px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 100%;
+}
 
-    @media screen and (min-width: 641px) {
+@media screen and (min-width: 641px) {
 
-        /* 通常ヘッダー */
+    /* 通常ヘッダー */
         /* ヘッダー上部（COMMON） */
         #headback {
             background: url("/image/head-back.png");
@@ -608,17 +608,19 @@
             opacity: 0;
         }
 
+
         /* firefox_fix*/
+
         @-moz-document url-prefix() {
             #global_nav .logo img {
                 border: 1px solid #fff;
             }
 
-            /* グロナビが2pxズレるのを修正 */
-            #scroll_nav {
-                transform: translateY(-2px);
-            }
-        }
+                /* グロナビが2pxズレるのを修正 */
+                #scroll_nav {
+                    transform: translateY(-2px);
+                }
+                }
 
         /* グロナビバグ修正 */
         @media screen and (min-width: 641px) {
@@ -628,11 +630,12 @@
                 justify-content: left;
             }
 
-            .fixed #nav {
-                padding-left: 96px;
-            }
+                .fixed #nav {
+                    padding-left: 96px;
+                }
 
-            .fixed_logo .logo img {
-                width: 96px;
-            }
-        }
+                .fixed_logo .logo img {
+                    width: 96px;
+                }
+                }
+}

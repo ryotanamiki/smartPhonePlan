@@ -37,9 +37,7 @@
     padding-top: 20px;
 }
 
-
 /* アンカーリンク対応のためネガティブマージン設定しています */
-
 .inc_gaiyo-body h3 {
     width: 100%;
     margin: 10px 0 0 0px;
@@ -417,9 +415,7 @@
     }
 }
 
-
 /* toggle用 */
-
 .ac-gaiyo-title {
     position: relative;
     cursor: pointer;

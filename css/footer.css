@@ -114,7 +114,7 @@
 #footer .footer_main1 .footer_map li {
     /* float: left; */
     padding: 5px 15px 5px 15px;
-    background: url(/image/fsm-icon.png) no-repeat 0 49%;
+    background: url(/images/images67.png) no-repeat 0 49%;
 }
 
 #footer .footer_main1 .footer_map li a {
@@ -147,7 +147,7 @@
 }
 
 .ft_info p.kigyou {
-    background: url(/image/f-mini-icon.jpg) no-repeat;
+    background: url(/images/images71.jpg) no-repeat;
     padding-left: 15px;
 }
 
@@ -200,7 +200,7 @@
 @media screen and (min-width: 641px) {
     #footer {
         width: 100%;
-        background: url(/image/footer-back.png ) repeat-x left bottom;
+        background: url(/images/footer-back.png ) repeat-x left bottom;
         height: 277px;
         margin-bottom: 0 !important;
     }
@@ -323,7 +323,7 @@
         float: none;
         text-align: left;
         padding: 5px 15px 5px 15px;
-        background: url(/image/fsm-icon.png) no-repeat 0 49%;
+        background: url(/images/images67.png) no-repeat 0 49%;
     }
 
     #footer .footer_main1 .pmark {
@@ -389,7 +389,7 @@
 
 #footer .footer_main1 .footer_map li.t_blank {
     padding: 5px 15px 5px 15px;
-    background: url(/image/f-mini-icon.png) no-repeat 0px 5px;
+    background: url(/images/images14.png) no-repeat 0px 5px;
 }
 
 #footer .footer_main1 .footer_map li {
