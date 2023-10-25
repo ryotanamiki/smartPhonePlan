@@ -1697,7 +1697,7 @@ div.plan-no {
 
 .answer-text {
     margin: 10px 20px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -1710,7 +1710,7 @@ div.plan-no {
     font-size: 1rem;
 }
 
-.line {
+.clearLine {
     position: absolute;
     top: 0;
     left: 40%;
