@@ -1,6 +1,6 @@
 $(function() {
 
-    $.getScript("/script/util/api.js", function() {
+    $.getScript("/script/util.js", function() {
 
         var data = {
             url: encodeURI(location.href)

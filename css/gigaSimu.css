@@ -43,34 +43,34 @@
     font-size: 1.6rem;
     position: relative;
     padding: 0.5rem 1.5rem;
-    }
-    
-    .cp-obi-area .cp-obi:after {
-        border: solid transparent;
-        content: '';
-        height: 0;
-        width: 0;
-        pointer-events: none;
-        position: absolute;
-        border-color: rgba(0, 153, 255, 0);
-        border-top-width: 10px;
-        border-bottom-width: 10px;
-        border-left-width: 10px;
-        border-right-width: 10px;
-        margin-left: -10px;
-        border-top-color: #e7198c;
-        top: 100%;
-        left: 50%;
-    }
-    
-    .use-cp-obi-area {
-        width: 80%;
-        margin: 0 0 auto;
-        padding: 5px;
-        display: none;
-    }
-    
-    .use-cp .use-cp-obi-area {
+}
+
+.cp-obi-area .cp-obi:after {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+    border-color: rgba(0, 153, 255, 0);
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    margin-left: -10px;
+    border-top-color: #e7198c;
+    top: 100%;
+    left: 50%;
+}
+
+.use-cp-obi-area {
+    width: 80%;
+    margin: 0 0 auto;
+    padding: 5px;
+    display: none;
+}
+
+.use-cp .use-cp-obi-area {
     display: block;
 }
 
@@ -377,7 +377,7 @@ span.line-before-price {
 
 #giga_simulator {
     padding: 4rem 0;
-    background-image: url("/images/images37.png");
+    background-image: url("/gigaplan/img/gigaSimulator2/border-brown-bg.png");
 }
 
 .giga-simulator .delete-btn {
@@ -736,7 +736,7 @@ span.line-before-price {
 
 .giga-simulator .q-area .q-items.checked .q-item.checked .q-item-icon.tell-yes,
 .giga-simulator .q-area .q-item .q-item-icon.tell-yes {
-    background-image: url("/images/images46.png");
+    background-image: url("/gigaplan/img/gigaSimulator2/icon_tel_yes_on.png");
 }
 
 .giga-simulator .q-area .q-items.checked .q-item .q-item-icon.tell-no {
@@ -745,7 +745,7 @@ span.line-before-price {
 
 .giga-simulator .q-area .q-items.checked .q-item.checked .q-item-icon.tell-no,
 .giga-simulator .q-area .q-item .q-item-icon.tell-no {
-    background-image: url("/images/images47.png");
+    background-image: url("/gigaplan/img/gigaSimulator2/icon_tel_no_on.png");
 }
 
 .giga-simulator .q-area .q-items.checked .q-item .q-item-icon.voiceesim-yes {
@@ -1456,27 +1456,27 @@ span.line-before-price {
     margin: 0;
     padding: 0;
     width: 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #F0E4CB;
-        color: #B07800;
-    }
-    
-    .giga-simulator .result-area .result-breakdown .breakdown-items {
-        width: 92%;
-    }
-    
-    .giga-simulator .result-area .result-breakdown .breakdown-items .breakdown-item {
-        border-top: none;
-    }
-    
-    .giga-simulator .result-area .result-breakdown .breakdown-items .breakdown-item+.breakdown-item {
-        border-top: solid 1px #B07800;
-    }
-    
-    .giga-simulator .result-breakdown .breakdown-item .line+.line {
-        border-top: dashed 1px #CDC8C5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0E4CB;
+    color: #B07800;
+}
+
+.giga-simulator .result-area .result-breakdown .breakdown-items {
+    width: 92%;
+}
+
+.giga-simulator .result-area .result-breakdown .breakdown-items .breakdown-item {
+    border-top: none;
+}
+
+.giga-simulator .result-area .result-breakdown .breakdown-items .breakdown-item+.breakdown-item {
+    border-top: solid 1px #B07800;
+}
+
+.giga-simulator .result-breakdown .breakdown-item .line+.line {
+    border-top: dashed 1px #CDC8C5;
 }
 
 .giga-simulator .result-area .share-label {
@@ -1535,76 +1535,76 @@ span.line-before-price {
     content: "";
     display: block;
     width: 15px;
-        height: 2px;
-        border-radius: 5px;
-        background: #FFF;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%) rotate(90deg);
-    }
-    
-    .giga-simulator .toggle-open.is-open i:after {
-        display: none;
-    }
-    
-    div.plan-no {
-        margin-left: 2rem;
-        display: inline-block;
-        font-size: 1.4rem;
-        background-color: #B07800;
-        color: #FFF;
-        padding: 0.5rem 1rem;
-        height: fit-content;
-        height: -moz-fit-content;
-    }
-    
-    .giga-simulator .result-area .breakdown-item {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    .giga-simulator .breakdown-item .price-detail {
-        width: 78%;
-    }
-    
-    .giga-simulator .breakdown-item .price-no-area {
-        width: 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #F6F3EE;
-    }
-    
-    .giga-simulator .breakdown-item .delete-btn-area {
-        width: 14%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .giga-simulator .breakdown-item .delete-btn-area .delte-btn {
-        margin: 0;
-    }
-    
-    .giga-simulator .breakdown-item .price-no-area div.plan-no {
-        margin: 0;
-    }
-    
-    .simulator-nav {
-        position: fixed;
-        right: 0px;
-        top: 200px;
-        z-index: 999;
-    }
-    
-    .simulator-nav img {
-        width: 40px;
-    }
-    
-    .gb-add-cp {
-        margin: 0.5rem auto;
-        text-align: center;
+    height: 2px;
+    border-radius: 5px;
+    background: #FFF;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.giga-simulator .toggle-open.is-open i:after {
+    display: none;
+}
+
+div.plan-no {
+    margin-left: 2rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    background-color: #B07800;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    height: fit-content;
+    height: -moz-fit-content;
+}
+
+.giga-simulator .result-area .breakdown-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.giga-simulator .breakdown-item .price-detail {
+    width: 78%;
+}
+
+.giga-simulator .breakdown-item .price-no-area {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F3EE;
+}
+
+.giga-simulator .breakdown-item .delete-btn-area {
+    width: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.giga-simulator .breakdown-item .delete-btn-area .delte-btn {
+    margin: 0;
+}
+
+.giga-simulator .breakdown-item .price-no-area div.plan-no {
+    margin: 0;
+}
+
+.simulator-nav {
+    position: fixed;
+    right: 0px;
+    top: 200px;
+    z-index: 999;
+}
+
+.simulator-nav img {
+    width: 40px;
+}
+
+.gb-add-cp {
+    margin: 0.5rem auto;
+    text-align: center;
 }
 
 .gb-add-cp img {
@@ -1625,6 +1625,139 @@ span.line-before-price {
 .single-page-only {
     display: none;
 }
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 5s;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.question-container,
+.result-container {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.question,
+.answer,
+.back-button,
+.result-container,
+.plan-details,
+.breakdown {
+    margin: 20px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.q-icon {
+    width: 20px;
+    background-color: #E55397;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.answer {
+    margin: 1.5%;
+}
+
+.answer-icon {
+    padding-top: 10px;
+}
+
+.answerButton {
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+}
+
+.answer-text {
+    margin: 10px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.subText {
+    font-size: 1.2rem;
+}
+
+.thirdText {
+    position: relative;
+    font-size: 1rem;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    font-weight: bold;
+}
+
+.fourthText {
+    color: #e7198c;
+    font-weight: bold;
+}
+
+.gigaText {
+    font-size: 16px;
+}
+
+
+.back-button {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.goBack {
+    width: fit-content;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #FFF;
+    color: #B97500;
+    padding: 1rem 4rem 1rem 5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    position: relative;
+    border: solid 2px #B97500;
+}
+
+.goBack::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 7%;
+    border-bottom: solid 2px #B97500;
+    border-left: solid 2px #B97500;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+}
+
 
 /* PC */
 @media screen and (min-width: 641px) {
@@ -1950,279 +2083,283 @@ span.line-before-price {
         padding: 0.5rem 0;
     }
 
-                                                                                                                                .giga-simulator .result-area .result-list .line-title {
-                                                                                                                                    display: inline-block;
-                                                                                                                                }
+    .giga-simulator .result-area .result-list .line-title {
+        display: inline-block;
+    }
 
-                                                                                                                                .giga-simulator .result-area .result-list .line-title>span {
-                                                                                                                                    display: block;
-                                                                                                                                }
+    .giga-simulator .result-area .result-list .line-title>span {
+        display: block;
+    }
 
-                                                                                                                                .giga-simulator .result-area .result-detail>div+div {
-                                                                                                                                    padding-left: 0;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-price-sum span.price {
-                                                                                                                                    font-size: 2.5rem;
-                                                                                                                                    padding: 0;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail span.tax-label {
-                                                                                                                                    font-size: 1.2rem;
-                                                                                                                                    padding: 0;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail,
-                                                                                                                                .giga-simulator .result-area .result-detail span {
-                                                                                                                                    font-size: 1.4rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-breakdown {
-                                                                                                                                    margin: 1rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .w-back-label {
-                                                                                                                                    position: initial;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area {
-                                                                                                                                    padding-bottom: 0.5rem;
-                                                                                                                                    border: none;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .diagnosis-area .multiple-lines-text {
-                                                                                                                                    width: 98%;
-                                                                                                                                    margin: 1rem auto 2rem auto;
-                                                                                                                                    font-size: 1.6rem;
-                                                                                                                                    font-weight: 400;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .diagnosis-area .multiple-lines-text span,
-                                                                                                                                .giga-simulator .diagnosis-area .multiple-lines-text span.small {
-                                                                                                                                    font-weight: 400;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .q-area .q-title img.q-icon {
-                                                                                                                                    width: 36px;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .toggle-open {
-                                                                                                                                    width: 90%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .toggle-open span.text {
-                                                                                                                                    padding-left: 30%;
-                                                                                                                                    font-size: 2.4rem;
-                                                                                                                                    letter-spacing: 1rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail-wrap {
-                                                                                                                                    width: 100%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail-wrap {
-                                                                                                                                    background-color: #F6F3EE;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-breakdown .breakdown-items {
-                                                                                                                                    width: 100%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-line-sum,
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-giga-sum,
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-price-sum {
-                                                                                                                                    text-align: center;
-                                                                                                                                    padding: 0 0.5rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-line-sum {
-                                                                                                                                    width: 25%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-giga-sum {
-                                                                                                                                    width: 30%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-detail .detail-price-sum {
-                                                                                                                                    width: 45%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .result-area .result-breakdown .breakdown-label {
-                                                                                                                                    width: 14%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-btn {
-                                                                                                                                    margin-right: 0.5rem;
-                                                                                                                                    border-radius: 8px;
-                                                                                                                                    border-width: 1px;
-                                                                                                                                    font-weight: 400;
-                                                                                                                                    padding: 1.5rem 0.5rem;
-                                                                                                                                    font-size: 1.4rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-btn::before {
-                                                                                                                                    top: initial;
-                                                                                                                                    bottom: 8px;
-                                                                                                                                    left: 40%;
-                                                                                                                                    border-bottom: solid 1px #B97500;
-                                                                                                                                    border-left: solid 1px #B97500;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-btn.is-open::before {
-                                                                                                                                    bottom: 5px;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-item .line .bd-name {
-                                                                                                                                    font-size: 1.2rem;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-item .price-no-area {
-                                                                                                                                    width: 12%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-item .price-detail {
-                                                                                                                                    width: 76%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-item .delete-btn-area {
-                                                                                                                                    width: 14%;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .delete-btn {
-                                                                                                                                    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
-                                                                                                                                    border-radius: 10px;
-                                                                                                                                    height: 20px;
-                                                                                                                                }
-                                                                
-                                                                                                                                .giga-simulator .breakdown-item .line span.price {
-                                                                                                                                    font-size: 1.6rem;
-                                                                                                                                }
+    .giga-simulator .result-area .result-detail>div+div {
+        padding-left: 0;
+    }
 
-                                                                                                                                .giga-simulator .delete-btn:after,
-                                                                                                                                .giga-simulator .delete-btn:before {
-                                                                                                                                    left: 5px;
-                                                                                                                                }
+    .giga-simulator .result-area .result-detail .detail-price-sum span.price {
+        font-size: 2.5rem;
+        padding: 0;
+    }
 
-                                                                                                                                .giga-simulator .diagnosis-area .diagnosis-title {
-                                                                                                                                    display: block;
+    .giga-simulator .result-area .result-detail span.tax-label {
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+    .giga-simulator .result-area .result-detail,
+    .giga-simulator .result-area .result-detail span {
+        font-size: 1.4rem;
+    }
+
+    .giga-simulator .result-area .result-breakdown {
+        margin: 1rem;
+    }
+
+    .giga-simulator .result-area .result-detail .w-back-label {
+        position: initial;
+    }
+
+    .giga-simulator .result-area {
+        padding-bottom: 0.5rem;
+        border: none;
+    }
+
+    .giga-simulator .diagnosis-area .multiple-lines-text {
+        width: 98%;
+        margin: 1rem auto 2rem auto;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    .giga-simulator .diagnosis-area .multiple-lines-text span,
+    .giga-simulator .diagnosis-area .multiple-lines-text span.small {
+        font-weight: 400;
+    }
+
+    .giga-simulator .q-area .q-title img.q-icon {
+        width: 36px;
+    }
+
+    .giga-simulator .toggle-open {
+        width: 90%;
+    }
+
+    .giga-simulator .toggle-open span.text {
+        padding-left: 30%;
+        font-size: 2.4rem;
+        letter-spacing: 1rem;
+    }
+
+    .giga-simulator .result-area .result-detail-wrap {
+        width: 100%;
+    }
+
+    .giga-simulator .result-area .result-detail-wrap {
+        background-color: #F6F3EE;
+    }
+
+    .giga-simulator .result-area .result-breakdown .breakdown-items {
+        width: 100%;
+    }
+
+    .giga-simulator .result-area .result-detail .detail-line-sum,
+    .giga-simulator .result-area .result-detail .detail-giga-sum,
+    .giga-simulator .result-area .result-detail .detail-price-sum {
         text-align: center;
-        
-            .giga-simulator .diagnosis-area .diagnosis-title .delete-btn {
-                margin: 0 auto;
-                margin-top: 1rem;
-        
-                div.plan-no {
-                    margin-left: 0.5rem;
-                    padding: 0.2rem 0.7rem;
-                
-                .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan .plan-icon {
-                    padding: .5rem;
-                    padding-left: .5rem;
-        
-                    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan img.plan-icon {
-                        width: 25px;
+        padding: 0 0.5rem;
+    }
 
-        .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.voice-option {
-                font-size: 1.4rem;
-                line-height: 1.6rem;
-                text-align: center;
-                display: inline-block;
-                margin-left: 0.5rem;
-            }
+    .giga-simulator .result-area .result-detail .detail-line-sum {
+        width: 25%;
+    }
 
-                                                                                                                                .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.option-label {
-                                                                                                                                    display: block;
+    .giga-simulator .result-area .result-detail .detail-giga-sum {
+        width: 30%;
+    }
+
+    .giga-simulator .result-area .result-detail .detail-price-sum {
+        width: 45%;
+    }
+
+    .giga-simulator .result-area .result-breakdown .breakdown-label {
+        width: 14%;
+    }
+
+    .giga-simulator .breakdown-btn {
+        margin-right: 0.5rem;
+        border-radius: 8px;
+        border-width: 1px;
+        font-weight: 400;
+        padding: 1.5rem 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .giga-simulator .breakdown-btn::before {
+        top: initial;
+        bottom: 8px;
+        left: 40%;
+        border-bottom: solid 1px #B97500;
+        border-left: solid 1px #B97500;
+    }
+
+    .giga-simulator .breakdown-btn.is-open::before {
+        bottom: 5px;
+    }
+
+    .giga-simulator .breakdown-item .line .bd-name {
+        font-size: 1.2rem;
+    }
+
+    .giga-simulator .breakdown-item .price-no-area {
+        width: 12%;
+    }
+
+    .giga-simulator .breakdown-item .price-detail {
+        width: 76%;
+    }
+
+    .giga-simulator .breakdown-item .delete-btn-area {
+        width: 14%;
+    }
+
+    .giga-simulator .delete-btn {
+        padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+        border-radius: 10px;
+        height: 20px;
+    }
+
+    .giga-simulator .breakdown-item .line span.price {
+        font-size: 1.6rem;
+    }
+
+    .giga-simulator .delete-btn:after,
+    .giga-simulator .delete-btn:before {
+        left: 5px;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-title {
+        display: block;
+        text-align: center;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-title .delete-btn {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
+    div.plan-no {
+        margin-left: 0.5rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan .plan-icon {
+        padding: .5rem;
+        padding-left: .5rem;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan img.plan-icon {
+        width: 25px;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.voice-option {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        text-align: center;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.option-label {
+        display: block;
         font-size: 1rem;
-            margin-left: 0;
-        }
-        
-        .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.option.no-limit {
-            font-size: 1.2rem;
-        }
-        
-        .giga-simulator .diagnosis-area .diagnosis-item {
-            padding: .5rem;
-        }
-        
-        .giga-simulator .diagnosis-area {
-            border: none;
-        }
-        
-        .giga-simulator .result-area .result-detail .detail-price-sum .price-sum {
-            min-width: 65%;
-        }
-        
-        .no-add-text {
-            width: 90%;
-        }
-        
-        .gb-add-cp img {
-            width: 95%;
-        }
-        
-        .giga-simulator .breakdown-item .line {
-            padding: 1rem 0.5rem;
-        }
-        
-        .giga-simulator .breakdown-item .line+.line {
-            padding: 1rem 0.5rem;
-            padding-left: 1.5rem;
-        }
-        
-        .giga-simulator .q-area .q-item .q-item-text.small-text {
-            font-size: 1.4rem;
-        }
-        
-        .cp-obi-area .cp-obi {
-            padding: 0.5rem;
-            max-width: 93%;
-            font-size: 3.4vw;
-        }
-        
-        .use-gbadd-cp span.before-gb-prace-wrap span,
-        .use-voicegbadd-cp span.before-gb-prace-wrap span,
-        .monthly-discount .use-monthly-discount .before-month-prace-wrap span,
-        .voicefree-cp .use-voicefree .before-month-prace-wrap span {
-            font-size: 1.2rem !important;
-        }
-        
-        .use-gbadd-cp span.before-gb-prace-wrap span.small,
-        .use-voicegbadd-cp span.before-gb-prace-wrap span.small,
-        .monthly-discount .use-monthly-discount .before-month-prace-wrap span.small,
-        .voicefree-cp .use-voicefree .before-month-prace-wrap span.small {
-            font-size: 1rem !important;
-        }
-        
-        .use-gbadd-cp span.before-gb-prace-wrap,
-        .use-voicegbadd-cp span.before-gb-prace-wrap,
-        .monthly-discount .use-monthly-discount .before-month-prace-wrap,
-        .voicefree-cp .use-voicefree span.before-month-prace-wrap {
-            top: -36px;
-        }
-        
-        .use-gbadd-cp .gb-prace-wrap::after,
-        .use-voicegbadd-cp .gb-prace-wrap::after {
-            top: -22px;
-        }
-        
-        .use-gbadd-cp .use-gbadd-cp-line.plan-line .line-gb-prace::after,
-        .use-voicegbadd-cp .use-gbadd-cp-line.plan-line .line-gb-prace::after {
-            top: -11px;
-        }
-        
-        .use-cp.use-monthly-discount .result-price-wrap .yen::after,
-        .use-cp.use-voicefree .result-price-wrap .yen::after {
-            top: -14px;
-        }
+        margin-left: 0;
+    }
 
-                                                                                                                                .q-anno-area {
-                                                                                                                                    text-indent: -1rem;
-                                                                                                                                    padding-left: -1rem;
-                                                                                                                                    text-align: left;
-                                                                                                                                    width: 90%;
-                                                                                                                                    margin-left: auto;
-                                                                                                                                    margin-right: auto;
-                                                                                                                                    margin-bottom: 1rem;
-                                                                                                                                }
-                                                                                                                                }
+    .giga-simulator .diagnosis-area .diagnosis-detail .diagnosis-plan span.option.no-limit {
+        font-size: 1.2rem;
+    }
+
+    .giga-simulator .diagnosis-area .diagnosis-item {
+        padding: .5rem;
+    }
+
+    .giga-simulator .diagnosis-area {
+        border: none;
+    }
+
+    .giga-simulator .result-area .result-detail .detail-price-sum .price-sum {
+        min-width: 65%;
+    }
+
+    .no-add-text {
+        width: 90%;
+    }
+
+    .gb-add-cp img {
+        width: 95%;
+    }
+
+    .giga-simulator .breakdown-item .line {
+        padding: 1rem 0.5rem;
+    }
+
+    .giga-simulator .breakdown-item .line+.line {
+        padding: 1rem 0.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .giga-simulator .q-area .q-item .q-item-text.small-text {
+        font-size: 1.4rem;
+    }
+
+    .cp-obi-area .cp-obi {
+        padding: 0.5rem;
+        max-width: 93%;
+        font-size: 3.4vw;
+    }
+
+    .use-gbadd-cp span.before-gb-prace-wrap span,
+    .use-voicegbadd-cp span.before-gb-prace-wrap span,
+    .monthly-discount .use-monthly-discount .before-month-prace-wrap span,
+    .voicefree-cp .use-voicefree .before-month-prace-wrap span {
+        font-size: 1.2rem !important;
+    }
+
+    .use-gbadd-cp span.before-gb-prace-wrap span.small,
+    .use-voicegbadd-cp span.before-gb-prace-wrap span.small,
+    .monthly-discount .use-monthly-discount .before-month-prace-wrap span.small,
+    .voicefree-cp .use-voicefree .before-month-prace-wrap span.small {
+        font-size: 1rem !important;
+    }
+
+    .use-gbadd-cp span.before-gb-prace-wrap,
+    .use-voicegbadd-cp span.before-gb-prace-wrap,
+    .monthly-discount .use-monthly-discount .before-month-prace-wrap,
+    .voicefree-cp .use-voicefree span.before-month-prace-wrap {
+        top: -36px;
+    }
+
+    .use-gbadd-cp .gb-prace-wrap::after,
+    .use-voicegbadd-cp .gb-prace-wrap::after {
+        top: -22px;
+    }
+
+    .use-gbadd-cp .use-gbadd-cp-line.plan-line .line-gb-prace::after,
+    .use-voicegbadd-cp .use-gbadd-cp-line.plan-line .line-gb-prace::after {
+        top: -11px;
+    }
+
+    .use-cp.use-monthly-discount .result-price-wrap .yen::after,
+    .use-cp.use-voicefree .result-price-wrap .yen::after {
+        top: -14px;
+    }
+
+    .q-anno-area {
+        text-indent: -1rem;
+        padding-left: -1rem;
+        text-align: left;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
 }
