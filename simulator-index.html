@@ -431,12 +431,12 @@
                                                         <img :src="answer.icon" alt="Icon">
                                                     </div>
                                                     <div class="answer-text">
-                                                        {{ answer.text }}<br>
+                                                        {{ answer.number }}{{ answer.text }}<br>
                                                         <div class="subText">{{ answer.subText }}</div>
                                                         <div class="thirdText">{{ answer.thirdText }}
                                                             <div class="clearLine">{{ answer.line }}</div>
                                                         </div>
-                                                        <div class="fourthText">{{ answer.fourthText }}</div>
+                                                        <div class="fourthText">{{ answer.fourthText }}{{ answer.number2 }}{{ answer.yen }}</div>
                                                         <div class="gigaText">{{ answer.gigaText }}</div>
                                                     </div>
                                                 </button>
@@ -991,9 +991,9 @@
                     {
                         text: '通話定額を使いますか？',
                         answers: [
-                            { id: 1, text: '通話定額5分 +', subText: '1日5分以内の国内通話無料', thirdText: '税込500円', fourthText: '税込90円', line: 'ーーーーー', icon: 'images/images51.png' },
-                            { id: 2, text: '通話定額10分 +', subText: '1日10分以内の国内通話無料', thirdText: '税込700円', fourthText: '税込290円', line: 'ーーーーー', icon: 'images/images52.png' },
-                            { id: 3, text: 'かけ放題 +', subText: '無制限で国内通話無料', thirdText: '税込1,400円', fourthText: '税込990円', line: 'ーーーーー', icon: 'images/images53.png' },
+                            { id: 1, text: '通話定額5分 +', subText: '1日5分以内の国内通話無料', thirdText: '税込500円', fourthText: '税込', number2: '90', yen: '円', line: 'ーーーーー', icon: 'images/images51.png' },
+                            { id: 2, text: '通話定額10分 +', subText: '1日10分以内の国内通話無料', thirdText: '税込700円', fourthText: '税込', number2: '290', yen: '円', line: 'ーーーーー', icon: 'images/images52.png' },
+                            { id: 3, text: 'かけ放題 +', subText: '無制限で国内通話無料', thirdText: '税込1,400円', fourthText: '税込', number2: '990', yen: '円', line: 'ーーーーー', icon: 'images/images53.png' },
                             { id: 4, text: '通話定額は使わない', subText: '', thirdText: '', fourthText: '', icon: 'images/images54.png' },
                         ],
                         hidden: true
@@ -1001,11 +1001,11 @@
                     {
                         text: 'データ通信は毎月どのくらいご利用ですか？',
                         answers: [
-                            { id: 1, text: '2ギガ', gigaText: 'いいえのWi-Fi利用が中心　外出先でネットはあまり使わない', icon: 'images/images41.png' },
-                            { id: 2, text: '5ギガ', gigaText: '外出先のSNS利用やネット閲覧が中心', icon: 'images/images42.png' },
-                            { id: 3, text: '10ギガ', gigaText: '外出先でゲームアプリを使う', icon: 'images/images43.png' },
-                            { id: 4, text: '15ギガ', gigaText: '外出先で動画を視聴しネットもよく使う', icon: 'images/images44.png' },
-                            { id: 5, text: '20ギガ', gigaText: '外出先でギガ（データ量）を気にせずに使いたい', icon: 'images/images44.png' },
+                            { id: 1, number: '2', text: 'ギガ', gigaText: 'いいえのWi-Fi利用が中心　外出先でネットはあまり使わない', icon: 'images/images41.png' },
+                            { id: 2, number: '5', text: 'ギガ', gigaText: '外出先のSNS利用やネット閲覧が中心', icon: 'images/images42.png' },
+                            { id: 3, number: '10', text: 'ギガ', gigaText: '外出先でゲームアプリを使う', icon: 'images/images43.png' },
+                            { id: 4, number: '15', text: 'ギガ', gigaText: '外出先で動画を視聴しネットもよく使う', icon: 'images/images44.png' },
+                            { id: 5, number: '20', text: 'ギガ', gigaText: '外出先でギガ（データ量）を気にせずに使いたい', icon: 'images/images44.png' },
                         ],
                         hidden: true
                     },
@@ -1025,24 +1025,26 @@
                 selectAnswer(answer) {
                     if (this.currentQuestionIndex === 0) {
                         if (answer.id === 1) {
-                            // はいを選択した場合
-                            this.currentQuestionIndex = 1;  // 「ご利用になるSIMカードの形状を教えてください」に移動
+                            this.currentQuestionIndex = 1;  // Move to "ご利用になるSIMカードの形状を教えてください"
                         } else if (answer.id === 2) {
-                            // いいえを選択した場合
-                            this.currentQuestionIndex = 2;  // 「SMSを使いますか？」にジャンプ
+                            this.currentQuestionIndex = 2;  // Move to "SMSを使いますか？"
                         }
                     } else if (this.currentQuestionIndex === 1) {
-                        this.currentQuestionIndex = 4;  // はい→「ご利用になるSIM〜」に移動
+                        this.currentQuestionIndex = 4;
                     } else if (this.currentQuestionIndex === 2) {
                         if (answer.id === 1) {
-                            this.currentQuestionIndex = 4 //　はい→「ご利用になるSIM〜」に移動
+                            this.currentQuestionIndex = 4;  // Move to "通話定額を使いますか？"
                         } else if (answer.id === 2) {
-                            this.currentQuestionIndex = 3; //　いいえ→「データeSIM〜」に移動
+                            this.currentQuestionIndex = 3;  // Move to "データ通信は毎月どのくらいご利用ですか？"
                         }
                     } else if (this.currentQuestionIndex === 3) {
-                        this.currentQuestionIndex = 4;
+                        if (answer.id === 1) {
+                            this.currentQuestionIndex = 4;  // Move to "データ通信は毎月どのくらいご利用ですか？"
+                        } else if (answer.id === 2) {
+                            this.currentQuestionIndex = 5;  // Move to "通話定額を使いますか？"
+                        }
                     } else if (this.currentQuestionIndex === 4) {
-                        this.currentQuestionIndex = 5;
+                        this.currentQuestionIndex = 5;  // Move to "データ通信は毎月どのくらいご利用ですか？"
                     } else if (this.currentQuestionIndex === this.questions.length - 1) {
                         this.selectedPlan = this.calculatePlan();
                     }
