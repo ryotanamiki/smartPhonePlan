@@ -1693,6 +1693,7 @@ div.plan-no {
     border-radius: 10px;
     width: 250px;
     height: 200px;
+    cursor: pointer;
 }
 
 .answer-text {
@@ -1744,6 +1745,7 @@ div.plan-no {
     text-decoration: none;
     position: relative;
     border: solid 2px #B97500;
+    cursor: pointer;
 }
 
 .goBack::before {

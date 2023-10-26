@@ -1009,7 +1009,6 @@
                         ],
                         hidden: true
                     },
-                    // Add more questions and answers
                 ],
                 plans: [
                     { name: 'プランA', price: 1000, basePrice: 800, dataPlan: 10 },
@@ -1047,13 +1046,16 @@
                     } else if (this.currentQuestionIndex === this.questions.length - 1) {
                         this.selectedPlan = this.calculatePlan();
                     }
+                    this.resultAnswers.push(this.currentQuestionIndex);
                 },
                 goBack() {
-                    if (this.currentQuestionIndex > 0) {
-                        this.currentQuestionIndex -= 1;
-                    }
-                    for (let i = this.currentQuestionIndex + 1; i < this.questions.length; i++) {
-                        this.questions[i].hidden = true;
+                    if (this.resultAnswers.length > 0) {
+                        const previousQuestionIndex = this.resultAnswers.pop();
+                        if(this.resultAnswers.length > 0) {
+                            this.currentQuestionIndex = this.resultAnswers[this.resultAnswers.length - 1];
+                        } else {
+                            this.currentQuestionIndex = 0;
+                        }
                     }
 
                 },
