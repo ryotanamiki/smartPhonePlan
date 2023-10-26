@@ -952,6 +952,7 @@
         const app = new Vue({
             el: '#app',
             data: {
+                resultAnswers: [],
                 currentQuestionIndex: 0,
                 showingBreakdown: false,
                 selectedPlan: null,
@@ -961,14 +962,31 @@
                         answers: [
                             { id: 1, text: '使う', subText: '（お乗り換えの方はこちら）', icon: '/images/images46.png' },
                             { id: 2, text: '使わない', subText: '', icon: '/images/images47.png' }
+                        ],
+                        hidden: false
+                    },
+                    {
+                        text: 'ご利用になるSIMの形状を教えてください',
+                        answers: [
+                            { id: 1, text: 'SIMカード', subText: '（カード型）', icon: 'images/icon_voiceesim_no_on.png' },
+                            { id: 2, text: 'eSIM', subText: '', icon: 'images/icon_voiceesim_yes_on.png' }
                         ]
                     },
                     {
                         text: 'SMSを使いますか？',
                         answers: [
-                            { id: 1, text: 'SIMカード', subText: '（カード型）', icon: 'images/icon_voiceesim_no_on.png' },
-                            { id: 2, text: 'eSIM', subText: '', icon: 'images/icon_voiceesim_yes_on.png' }
-                        ]
+                            { id: 1, text: 'SMSを使う', icon: 'images/images55.png' },
+                            { id: 2, text: 'SMSは使わない', icon: 'images/images56.png' },
+                        ],
+                        hidden: true
+                    },
+                    {
+                        text: 'データeSIMを使いますか？',
+                        answers: [
+                            { id: 1, text: 'データeSIMを使う', icon: 'images/images57.png' },
+                            { id: 2, text: 'データeSIMは使わない', icon: 'images/images58.png' },
+                        ],
+                        hidden: true
                     },
                     {
                         text: '通話定額を使いますか？',
@@ -977,7 +995,8 @@
                             { id: 2, text: '通話定額10分 +', subText: '1日10分以内の国内通話無料', thirdText: '税込700円', fourthText: '税込290円', line: 'ーーーーー', icon: 'images/images52.png' },
                             { id: 3, text: 'かけ放題 +', subText: '無制限で国内通話無料', thirdText: '税込1,400円', fourthText: '税込990円', line: 'ーーーーー', icon: 'images/images53.png' },
                             { id: 4, text: '通話定額は使わない', subText: '', thirdText: '', fourthText: '', icon: 'images/images54.png' },
-                        ]
+                        ],
+                        hidden: true
                     },
                     {
                         text: 'データ通信は毎月どのくらいご利用ですか？',
@@ -987,21 +1006,8 @@
                             { id: 3, text: '10ギガ', gigaText: '外出先でゲームアプリを使う', icon: 'images/images43.png' },
                             { id: 4, text: '15ギガ', gigaText: '外出先で動画を視聴しネットもよく使う', icon: 'images/images44.png' },
                             { id: 5, text: '20ギガ', gigaText: '外出先でギガ（データ量）を気にせずに使いたい', icon: 'images/images44.png' },
-                        ]
-                    },
-                    {
-                        text: 'SMSを使いますか？',
-                        answers: [
-                            { id: 1, text: 'SMSを使う', icon: 'images/images55.png' },
-                            { id: 2, text: 'SMSは使わない', icon: 'images/images56.png' },
-                        ]
-                    },
-                    {
-                        text: 'データeSIMを使いますか？',
-                        answers: [
-                            { id: 1, text: 'データeSIMを使う', icon: 'images/images57.png' },
-                            { id: 2, text: 'データeSIMは使わない', icon: 'images/images58.png' },
-                        ]
+                        ],
+                        hidden: true
                     },
                     // Add more questions and answers
                 ],
@@ -1014,19 +1020,42 @@
             computed: {
                 currentQuestion() {
                     return this.questions[this.currentQuestionIndex];
-                }
+                },
             },
             methods: {
                 selectAnswer(answer) {
-                    if (this.currentQuestionIndex === this.questions.length - 1) {
+                    if (this.currentQuestionIndex === 0) {
+                        if (answer.id === 1) {
+                            // はいを選択した場合
+                            this.currentQuestionIndex = 1;  // 「ご利用になるSIMカードの形状を教えてください」に移動
+                        } else if (answer.id === 2) {
+                            // いいえを選択した場合
+                            this.currentQuestionIndex = 2;  // 「SMSを使いますか？」にジャンプ
+                        }
+                    } else if (this.currentQuestionIndex === 1) {
+                        this.currentQuestionIndex = 4;  // はい→「ご利用になるSIM〜」に移動
+                    } else if (this.currentQuestionIndex === 2) {
+                        if (answer.id === 1) {
+                            this.currentQuestionIndex = 4 //　はい→「ご利用になるSIM〜」に移動
+                        } else if (answer.id === 2) {
+                            this.currentQuestionIndex = 3; //　いいえ→「データeSIM〜」に移動
+                        }
+                    } else if (this.currentQuestionIndex === 3) {
+                        this.currentQuestionIndex = 4;
+                    } else if (this.currentQuestionIndex === 4) {
+                        this.currentQuestionIndex = 5;
+                    } else if (this.currentQuestionIndex === this.questions.length - 1) {
                         this.selectedPlan = this.calculatePlan();
                     }
-                    this.currentQuestionIndex += 1;
                 },
                 goBack() {
                     if (this.currentQuestionIndex > 0) {
                         this.currentQuestionIndex -= 1;
                     }
+                    for (let i = this.currentQuestionIndex + 1; i < this.questions.length; i++) {
+                        this.questions[i].hidden = true;
+                    }
+
                 },
                 calculatePlan() {
                     // Calculate the plan based on user's answers
