@@ -1626,6 +1626,140 @@ div.plan-no {
     display: none;
 }
 
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 5s;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.question-container,
+.result-container {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.question,
+.answer,
+.back-button,
+.result-container,
+.plan-details,
+.breakdown {
+    margin: 20px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.q-icon {
+    width: 20px;
+    background-color: #E55397;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.answer {
+    margin: 1%;
+}
+
+.answer-icon {
+    padding-top: 10px;
+}
+
+.answerButton {
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.answer-text {
+    margin: 10px 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.subText {
+    font-size: 1.2rem;
+}
+
+.thirdText {
+    position: relative;
+    font-size: 1rem;
+}
+
+.clearLine {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    font-weight: bold;
+}
+
+.fourthText {
+    color: #e7198c;
+    font-weight: bold;
+}
+
+.gigaText {
+    font-size: 16px;
+}
+
+
+.back-button {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.goBack {
+    width: fit-content;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #FFF;
+    color: #B97500;
+    padding: 1rem 4rem 1rem 5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    position: relative;
+    border: solid 2px #B97500;
+    cursor: pointer;
+}
+
+.goBack::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 7%;
+    border-bottom: solid 2px #B97500;
+    border-left: solid 2px #B97500;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+}
 
 
 /* PC */
