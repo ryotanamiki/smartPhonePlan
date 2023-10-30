@@ -935,6 +935,7 @@
         const app = new Vue({
             el: '#app',
             data: {
+                selectedAnswer: [],
                 selectedGiga: '',
                 selectedPrice: '',
                 answerImg: '',
@@ -1006,6 +1007,18 @@
                 currentQuestion() {
                     return this.questions[this.currentQuestionIndex];
                 },
+                result() {
+                    const currentAnswer = this.selectedAnswer
+                    this.resultSim = answer.texts;
+                    this.resultPrice = answer.number2 + answer.gigaPrice;
+                    this.resultTell = answer.min;
+
+                    return {
+                        resultSim,
+                        resultPrice,
+                        resultTell
+                    };
+                },
             },
             methods: {
                 selectAnswer(answer) {
@@ -1058,6 +1071,11 @@
                 },
                 showBreakdown() {
                     this.showingBreakdown = true;
+                }
+            },
+            watch: {
+                selectedAnswer: function (newAnswer) {
+                    this.computedResults = newAnswer;
                 }
             }
         });
