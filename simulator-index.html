@@ -431,7 +431,7 @@
                                                         <img :src="answer.icon" alt="Icon">
                                                     </div>
                                                     <div class="answer-text">
-                                                        {{ answer.number }}{{ answer.text }}{{ answer.min }}<br>
+                                                        {{ answer.number }}{{ answer.text }}{{ answer.texts }}{{ answer.min }}<br>
                                                         <div class="subText">{{ answer.subText }}</div>
                                                         <div class="thirdText">{{ answer.thirdText }}
                                                             <div class="clearLine">{{ answer.line }}</div>
@@ -536,7 +536,7 @@
                                                                 <div class="plan-no" data-sync-id="plan-no">1</div>
                                                                 <div><img data-sync-id="plan-icon" class="plan-icon" src="/images/voice-icon.png" alt="">
                                                                 </div>
-                                                                <div class="plan-text"><span class="one-line"><span data-sync-id="plan"></span>
+                                                                <div class="plan-text"><span class="one-line"><span data-sync-id="plan">{{ resultSim }}</span>
                                                                         <span class="gb-prace-wrap"><span class="before-gb-prace-wrap"><span
                                                                                     data-sync-id="before-gb">GB</span></span><span data-sync-id="gb" class="gb">{{
                                                                                 resultGiga }}</span>GB</span>
@@ -955,22 +955,22 @@
                     {
                         text: 'ご利用になるSIMの形状を教えてください',
                         answers: [
-                            { id: 1, text: 'SIMカード', subText: '（カード型）', icon: 'images/icon_voiceesim_no_on.png' },
-                            { id: 2, text: 'eSIM', subText: '', icon: 'images/icon_voiceesim_yes_on.png' }
+                            { id: 1, texts: 'SIMカード', subText: '（カード型）', icon: 'images/icon_voiceesim_no_on.png' },
+                            { id: 2, texts: 'eSIM', subText: '', icon: 'images/icon_voiceesim_yes_on.png' }
                         ]
                     },
                     {
                         text: 'SMSを使いますか？',
                         answers: [
-                            { id: 1, text: 'SMSを使う', icon: 'images/images55.png' },
-                            { id: 2, text: 'SMSは使わない', icon: 'images/images56.png' },
+                            { id: 1, texts: 'SMSを使う', icon: 'images/images55.png' },
+                            { id: 2, texts: 'SMSは使わない', icon: 'images/images56.png' },
                         ],
                     },
                     {
                         text: 'データeSIMを使いますか？',
                         answers: [
-                            { id: 1, text: 'データeSIMを使う', icon: 'images/images57.png' },
-                            { id: 2, text: 'データeSIMは使わない', icon: 'images/images58.png' },
+                            { id: 1, texts: 'データeSIMを使う', icon: 'images/images57.png' },
+                            { id: 2, texts: 'データeSIMは使わない', icon: 'images/images58.png' },
                         ],
                     },
                     {
