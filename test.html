@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>格安スマホ料金シミュレーション</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common2.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/pc.css">
+    <link rel="stylesheet" type="text/css" href="css/pc_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/simulation.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="question-container" v-if="currentQuestionIndex !== questions.length">
+            <transition name="slide-fade">
+                <div class="question">
+                    <div class="q-icon">Q</div>
+                    <div class="title">{{ currentQuestion.text }}</div>
+                </div>
+            </transition>
+            <div class="answers">
+                <div class="answer" v-for="answer in currentQuestion.answers" :key="answer.id">
+                    <button @click="selectAnswer(answer)" class="answerButton">
+                        <div class="answer-icon">
+                            <img :src="answer.icon" alt="Icon">
+                        </div>
+                        <div class="answer-text" style="padding-top: 15px;">
+                            {{ answer.text }}<br>
+                            <div class="subText">{{ answer.subText }}</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="back-button">
+                <button @click="goBack">前の設問にもどる</button>
+            </div>
+        </div>
+        <div class="result-container" v-else>
+            <h2>あなたに最適なプランはこれ！</h2>
+            <div class="plan-details">
+                <p>プラン内容: {{ selectedPlan.name }}</p>
+                <p>月額料金: {{ selectedPlan.price }}円</p>
+                <button @click="showBreakdown">内訳</button>
+            </div>
+            <div class="breakdown" v-if="showingBreakdown">
+                <h3>内訳</h3>
+                <p>基本料金: {{ selectedPlan.basePrice }}円</p>
+                <p>データプラン: {{ selectedPlan.dataPlan }}GB</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .slide-fade-enter-active,
+        .slide-fade-leave-active {
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .slide-fade-enter,
+        .slide-fade-leave-to {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        .question-container,
+        .result-container {
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+
+        .question,
+        .answer,
+        .back-button,
+        .result-container,
+        .plan-details,
+        .breakdown {
+            margin: 20px;
+        }
+
+        .question {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .q-icon {
+            width: 20px;
+            background-color: #E55397;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            padding: 0.3rem 1rem;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-left: 5px;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .answerButton {
+            padding: 20px 30px;
+            border-radius: 10px;
+        }
+
+        .subText {
+            font-size: 1rem;
+        }
+    </style>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                currentQuestionIndex: 0,
+                showingBreakdown: false,
+                selectedPlan: null,
+                questions: [
+                    {
+                        text: '電話番号（090等）は必要ですか？',
+                        answers: [
+                            { id: 1, text: '使う', subText: '（お乗り換えの方はこちら）', icon: '/images/images46.png' },
+                            { id: 2, text: '使わない', subText: '　　　　　　　　　　　　　', icon: '/images/images47.png' }
+                        ]
+                    },
+                    {
+                        text: 'SMSを使いますか？',
+                        answers: [
+                            { id: 1, text: '使う', icon: 'path-to-icon-1.png' },
+                            { id: 2, text: '使わない', icon: 'path-to-icon-2.png' }
+                        ]
+                    },
+                    // Add more questions and answers
+                ],
+                plans: [
+                    { name: 'プランA', price: 1000, basePrice: 800, dataPlan: 10 },
+                    { name: 'プランB', price: 1200, basePrice: 900, dataPlan: 15 },
+                    // Define more plans
+                ]
+            },
+            computed: {
+                currentQuestion() {
+                    return this.questions[this.currentQuestionIndex];
+                }
+            },
+            methods: {
+                selectAnswer(answer) {
+                    if (this.currentQuestionIndex === this.questions.length - 1) {
+                        this.selectedPlan = this.calculatePlan();
+                    }
+                    this.currentQuestionIndex += 1;
+                },
+                goBack() {
+                    if (this.currentQuestionIndex > 0) {
+                        this.currentQuestionIndex -= 1;
+                    }
+                },
+                calculatePlan() {
+                    // Calculate the plan based on user's answers
+                    // Replace with your logic
+                    return this.plans[0];
+                },
+                showBreakdown() {
+                    this.showingBreakdown = true;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

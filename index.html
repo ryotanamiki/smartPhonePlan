@@ -1,0 +1,1362 @@
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns#">
+    <!-- 共通 -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common2.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/pc.css">
+    <link rel="stylesheet" type="text/css" href="css/smp.css">
+    <link rel="stylesheet" type="text/css" href="css/pc_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/smp_menu.css">
+    <script src="/script/jquery-3.4.1.min.js"></script>
+    <!-- /共通 -->
+
+    <link rel="stylesheet" type="text/css" href="css/simulation.css">
+    <meta http-equiv="x-ua-compatible" content="IE=11">
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11">
+
+    <title>料金プランかんたん診断｜格安SIM/格安スマホのIIJmio</title>
+    <meta name="description" content="最大4つの質問に答えるだけで、新プラン「ギガプラン」からあなたにピッタリな料金プランをご提案！ご家族でお乗り換えされる場合の料金シミュレーションも行えます。">
+    <meta name="keywords"
+        value="シミュレーション,乗り換え,診断,料金,安い,プラン,スマホ,スマートフォン,格安SIM,格安スマホ,IIJmio,IIJ,mio,アイアイジェイミオ,アイアイ ジェイ,ギガプラン,新プラン,みおふぉん">
+
+    <script src="/script/chatbot_popup.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/gaiyo.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="private">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="og:title" content="料金プランかんたん診断｜格安SIM/格安スマホのIIJmio">
+    <meta property="og:description"
+        content="最大4つの質問に答えるだけで、新プラン「ギガプラン」からあなたにピッタリな料金プランをご提案！ご家族でお乗り換えされる場合の料金シミュレーションも行えます。">
+    <meta property="og:url" content="https://www.iijmio.jp/gigaplan/simulation/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.iijmio.jp/image/icon-og01.png">
+    <link rel="canonical" href="https://www.iijmio.jp/gigaplan/simulation/">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8,minimum-scale=0.8, user-scalable=yes">
+    <style>
+        .krkr-chat {
+            bottom: 16px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+            display: flex;
+            flex-direction: column;
+            height: 540px;
+            position: fixed;
+            right: 16px;
+            width: 360px;
+            z-index: 99999;
+        }
+    
+        @media (max-height:540px),
+        (max-width:480px) {
+            .krkr-chat {
+                bottom: 0 !important;
+                height: auto !important;
+                left: 0 !important;
+                right: 0 !important;
+                top: 0 !important;
+                width: auto !important
+            }
+        }
+    
+        .krkr-chat__head {
+            align-items: center;
+            background: #eee;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiDialog">
+        @media print {
+            .MuiDialog-root {
+                position: absolute !important;
+            }
+        }
+    
+        .MuiDialog-scrollPaper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .MuiDialog-scrollBody {
+            overflow-x: hidden;
+            overflow-y: auto;
+            text-align: center;
+        }
+    
+        .MuiDialog-scrollBody:after {
+            width: 0;
+            height: 100%;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+        .jss1 {
+            overflow: visible;
+            text-align: center;
+            padding-top: 40.5px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 40.5px;
+        }
+    
+        .jss2 {
+            top: -12px;
+            right: -12px;
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            box-shadow: none;
+            min-height: 26px;
+        }
+    
+        .jss3 {
+            max-width: 141px;
+            max-height: 141px;
+            margin-bottom: 12px;
+        }
+    
+        .jss4 {
+            margin-bottom: 4px;
+        }
+    </style>
+    <style data-jss="" data-meta="makeStyles"></style>
+</head>
+
+<body data-twttr-rendered="true">
+    <div id="wrapper">
+        <link rel="stylesheet" href="css/pc_menu.css" media="all">
+        <link rel="stylesheet" href="css/smp_menu.css" media="all">
+
+<!-- 消しちゃダメ （/davice/index.html用 ）-->
+<div class="nav"></div>
+<!-- 消しちゃダメ （/davice/index.html用 ）-->
+
+<!-- PCメニュー -->
+<div id="headback" class="smp_off">
+    <header id="global_nav">
+        <div class=" clearfix">
+            <div id="logoArea" class="logoArea">
+                <div class="logo">
+                    <a href="/"><img src="/images/logo.jpg" alt="IIJmioロゴ"></a>
+                </div>
+                <div class="iij-30th-logo">
+                    <a href="https://www.iij.ad.jp/30th/"><img src="/images/logo_30th.png" alt="IIJ30th"></a>
+                </div>
+            </div>
+            <div class="head_sub_02 clearfix">
+                <div class="h_search_02">
+                    <div class="search">
+                        <form id="ss-form1" action="/search/sample.html" method="get" accept-charset="UTF-8">
+                            <input type="hidden" name="file_type" value="1">
+                            <input type="text" id="ss-query1" name="query" autocomplete="off" aria-autocomplete="none">
+                            <input type="submit" value="検索" onclick="document.charset='UTF-8';">
+                        </form>
+                    </div>
+                </div>
+                <ul>
+                    <li class="ipv6">
+                        <a href="/guide/outline/ipv6/icon/"><img class="ipv6status" src="/images/images02.gif"
+                                alt="IPv6接続状態"></a>
+                    </li>
+                </ul>
+
+                <div class="h_login_02">
+                    <div id="login" class="hidden">
+                        <span id="login-message" class="hidden"><a href="/auth/message/welcome/"><img
+                                    src="/image/message.jpg" alt="メッセージあり"></a></span>
+                        <span id="login-username"></span>
+                        <a href="/auth/logout/"><img src="/images/images04.jpg" alt="ログアウト"></a>
+                    </div>
+                    <div id="logout" class="" style="display: block;">
+                        <a href="/auth/login/"><img src="/images/images05.jpg" alt="ログイン "></a>
+                    </div>
+                </div>
+            </div>
+            <div class="top_nav clearfix">
+                <div class="top_nav_list clearfix">
+                    <ul>
+                        <li><a href="/member/ ">会員専用ページ</a></li>
+                        <li><a href="/campaign/">キャンペーン</a></li>
+                        <li><a href="/hdc/visitors/" target="_blank">外国人の方&nbsp;English</a></li>
+                        <li class="help"><a href="https://help.iijmio.jp/">FAQホーム</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.clearfix -->
+
+        <!-- ドロップメニュー＆スクロールメニュー -->
+        <div id="scroll_nav">
+            <div class="navArea clearfix">
+                <ul id="nav" class="clearfix">
+
+                    <li class="line">
+                        <a href="/hdc/spec/">
+                            <aside class="icon-box">
+                                <img class="price menu-icon" src="/images/images07.png" alt="料金・プラン">
+                                <img class="price menu-icon on" src="/images/images08.png" alt="料金・プラン">
+                                <span class="menu-icon-text">料金<span class="narrow-dot">
+                                        <div class="dot-parts"></div>
+                                    </span>プラン</span>
+                            </aside>
+                        </a>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line">
+                        <a href="javascript:void(0);">
+                            <aside class="icon-box">
+                                <img class="sim menu-icon" src="/images/images09.png" alt="SIM・eSIM">
+                                <img class="sim menu-icon on" src="/images/images10.png" alt="SIM・eSIM">
+                                <span class="menu-icon-text">SIM / eSIM</span>
+                            </aside>
+                        </a>
+                        <ul class="op_body clearfix">
+                            <!-- 左カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_title">ラインアップ</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="/gigaplan/">ギガプラン</a></div>
+                                        <div class="dir_link"><a href="/gigaplan/esim/phone/">ギガプラン 音声eSIM</a>
+                                        </div>
+                                        <div class="dir_link"><a href="/juryo.html">従量制プラン</a></div>
+                                        <div class="dir_link"><a href="/esim/">eSIM（データプラン ゼロ）</a></div>
+                                        <div class="dir_link"><a href="/eraberu/">えらべるSIMカード</a></div>
+                                        <div class="dir_link t_blank"><a href="https://s.iijmio.jp/prepaid/"
+                                                target="_blank">プリペイドSIM</a></div>
+                                        <div class="dir_link t_blank"><a href="https://s.iijmio.jp/couponcard/"
+                                                target="_blank">クーポンカード</a></div>
+                                        <div class="dir_link t_blank"><a href="https://tr.iijmio.jp/"
+                                                target="_blank">Japan Travel SIM<br>（訪日外国人向けSIM）</a></div>
+                                        <!-- <div class="dir_link"><a href="/mit/">IIJmio IoT</a></div> -->
+                                        <div class="dir_link"><a href="https://bicsim.com/">BIC SIM</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 左カラム -->
+                            <!-- 中央カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_title">オプション</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a
+                                                href="/mobile/voicefree/">通話定額オプション<br>（5分、10分、かけ放題）</a></div>
+                                        <div class="dir_link"><a href="/hdd/option/">モバイルオプション</a></div>
+                                        <div class="dir_link"><a href="/mm/">セーフティメールサービス</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 中央カラム -->
+                            <!-- 右カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_title">ご購入ガイド</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="/simguide/">格安SIMガイド</a></div>
+                                        <div class="dir_link"><a href="/hdc/guide/norikae.html">お申し込みの流れ</a>
+                                        </div>
+                                        <div class="dir_link"><a href="/gigaplan/dataoption/">データシェア・プレゼント機能とは</a></div>
+                                        <div class="dir_link"><a href="/intlcall/">国際電話</a></div>
+                                        <div class="dir_link"><a href="/hdd/devices/">動作確認済み端末一覧</a></div>
+                                    </div>
+                                    <br>
+                                    <div class="dir_title">ご購入後ガイド</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="/hdc/guide/norikae.html">乗り換えガイド</a>
+                                        </div>
+                                        <div class="dir_link">
+                                            初期設定手順（SIMカード）<br><br>
+                                            <a href="/hdd/guide/apn.html#apn_ios">・iPhone/iPad</a><br>
+                                            <a href="/hdd/guide/apn.html#apn_and">・Android</a>
+                                        </div>
+                                        <div class="dir_link">
+                                            初期設定手順（eSIM）<br><br>
+                                            <a href="/hdd/esim/flow/iphone.html">・iPhone/iPad</a><br>
+                                            <a href="/hdd/esim/flow/android.html">・Android</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 右カラム -->
+                        </ul>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line">
+                        <a href="javascript:void(0);">
+                            <aside class="icon-box">
+                                <img class="device menu-icon" src="/images/images15.png" alt="端末・セット">
+                                <img class="device menu-icon on" src="/images/images16.png" alt="端末・セット">
+                                <span class="menu-icon-text">端末<span class="narrow-dot">
+                                        <div class="dot-parts"></div>
+                                    </span>セット</span>
+                            </aside>
+                        </a>
+                        <ul class="op_body clearfix">
+                            <!-- 左カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_link"><a href="/device/">端末ラインアップ</a></div>
+                                    <div class="dir_link"><a href="/hdd/devices/">動作確認済み端末</a></div>
+                                    <div class="dir_title">メーカーから探す</div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=ASUS">ASUS</a></div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=OPPO">OPPO</a></div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=SHARP">SHARP</a></div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=Xperia">ソニー</a></div>
+                                    <div class="dir_link"><a
+                                            href="/device/?SearchKeyword=%E5%AF%8C%E5%A3%AB%E9%80%9A">富士通</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=motorola">motorola</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=HUAWEI">HUAWEI</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=Xiaomi">Xiaomi</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 左カラム -->
+                            <!-- 中央カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_title">ブランドから探す</div>
+                                    <div class="dir_link"><a href="/device/iphone.html">中古 iPhone＆iPad</a></div>
+                                    <div class="dir_link"><a href="/device/usedandroid.html">中古 Androidスマホ</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=ZenFone">ZenFone</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=AQUOS">AQUOS</a></div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=Xperia">Xperia</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=arrows">arrows</a>
+                                    </div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=moto">moto</a></div>
+                                    <div class="dir_link"><a href="/device/?SearchKeyword=P30">P30</a></div>
+                                </div>
+                            </li>
+                            <!-- 中央カラム -->
+                            <!-- 右カラム -->
+                            <li class="dir">
+                                <div class="dir_body">
+                                    <div class="dir_link"><a href="/device/?DeviceType=ntpc">ノートPC</a></div>
+                                    <div class="dir_link"><a href="/device/?DeviceType=t">SIMフリータブレット</a></div>
+                                    <div class="dir_link"><a href="/device/?DeviceType=i">IoT機器</a></div>
+                                    <div class="dir_link"><a
+                                            href="/device/?DeviceType=r&amp;DeviceType2=hikari">WiFiルータ</a>
+                                    </div>
+                                    <div class="dir_title">その他</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="/device/option/">端末補償（IIJmioで新品端末購入）</a>
+                                        </div>
+                                        <div class="dir_link"><a href="/device/option/used.html">端末補償（IIJmioで中古端末購入）</a>
+                                        </div>
+                                        <div class="dir_link"><a href="/hdd/option/tsunagaru/">端末保証（お手持ちのスマホ対象）</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 右カラム -->
+                        </ul>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line">
+                        <a href="/imh/">
+                            <aside class="icon-box">
+                                <img class="hikari menu-icon" src="/images/images17.png" alt="mioひかり">
+                                <img class="hikari menu-icon on" src="/images/images33.png" alt="SIM・eSIM">
+                                <span class="menu-icon-text">mioひかり</span>
+                            </aside>
+
+                        </a>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line">
+                        <a href="javascript:void(0);">
+                            <aside class="icon-box">
+                                <img class="support menu-icon" src="/images/images19.png" alt="サポート・取扱店舗">
+                                <img class="support menu-icon on" src="/images/images20.png" alt="サポート・取扱店舗">
+                                <span class="menu-icon-text">サポート<span class="narrow-dot">
+                                        <div class="dot-parts"></div>
+                                    </span><br class="fixed-active">店舗</span>
+                            </aside>
+
+                        </a>
+                        <ul class="op_body clearfix">
+                            <!-- 左カラム -->
+                            <li class="dir">
+                                <div class="dir_body dir_body_short">
+                                    <div class="dir_title">サポート</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="https://help.iijmio.jp/">FAQホーム</a></div>
+                                        <div class="dir_link"><a href="/contact.html">お問い合わせ</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 左カラム -->
+                            <!-- 中央カラム -->
+                            <li class="dir">
+                                <div class="dir_body dir_body_short">
+                                    <div class="dir_title">取り扱い店舗</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="https://shop.iijmio.jp">お近くの店舗を探す</a>
+                                        </div>
+                                        <div class="dir_link"><a href="/hdd/shop/" target="_blank">製品・サービスから探す</a></div>
+                                        <div class="dir_link"><a
+                                                href="https://shop.iijmio.jp?c=%E9%9F%B3%E5%A3%B0%20%E5%8D%B3%E6%97%A5%E9%96%8B%E9%80%9A&amp;m=%E3%82%B3%E3%82%B8%E3%83%9E,%E3%82%BD%E3%83%95%E3%83%9E%E3%83%83%E3%83%97,%E3%83%93%E3%83%83%E3%82%AF%E3%82%AB%E3%83%A1%E3%83%A9"
+                                                target="_blank">主要取り扱い店舗・BICSIMについて</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 中央カラム -->
+                            <!-- 右カラム -->
+                            <li class="dir">
+                                <div class="dir_body dir_body_short">
+                                    <!-- <div class="dir_title">取り扱い店舗</div>
+                                    <div class="dir_main">
+                                        <div class="dir_link"><a href="https://shop.iijmio.jp">お近くの店舗を探す</a></div>
+                                        <div class="dir_link"><a href="/hdd/shop/" target="_blank">製品・サービスから探す</a></div>
+                                    </div> -->
+                                </div>
+                            </li>
+                            <!-- 右カラム -->
+                        </ul>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line end bg-glay">
+                        <a href="/biz/">
+                            <aside class="icon-box">
+                                <img class="support menu-icon" src="/images/images21.png" alt="法人の客様">
+                                <img class="support menu-icon on" src="/images/images22.png" alt="法人の客様">
+                                <span class="menu-icon-text">法人のお客様</span>
+                            </aside>
+
+                        </a>
+                    </li>
+                    <!-- /.line -->
+
+                    <li class="line2">
+                        <a href="/mobile/signup/">
+                            <img src="/images/images23.jpg" alt="ご購入・お申し込み" width="149" height="109"></a>
+                    </li>
+                    <!-- /.line2 -->
+                </ul>
+                <!-- #nav -->
+            </div>
+            <!-- /.nav_Area -->
+        </div>
+        <!-- /.scroll_nav -->
+    </header>
+    <!-- /#global_nav -->
+</div>
+<!-- /#headback -->
+<!-- /PCメニュー -->
+
+<div class="mainArea fadein" style="opacity: 0;">
+    <!--pankuzu-->
+    <div id="pankuzu" class="smp_off">
+        <div class="pankuzu_body">
+            <a href="/" class="home">ホーム</a><img alt="　" src="/images/list.gif" width="13" height="9"><a
+                href="/gigaplan/">ギガプラン</a><img alt="　" src="/images/list.gif" width="13" height="9">料金シミュレーション
+        </div>
+    </div>
+    <!--/pankuzu-->
+    <!-- include pankuzu -->
+
+            <!-- シュミレータ -->
+            <link rel="stylesheet" type="text/css" href="css/slick.css">
+            <link rel="stylesheet" type="text/css" href="css/gigaSimulator2.css">
+            
+            <div id="giga_simulator" class="voicefree-cp monthly-discount">
+                <div class="simulator-nav">
+                    <a class="simulator-nav" href="#giga_simulator">
+                        <img src="images/gigaSimulator2/btn_simulation.png" alt="ギガプランシュミレーター">
+                    </a>
+                </div>
+                <div class="giga-simulator">
+                    <!-- タイトルエリア -->
+                    <div class="content title-area">
+                        <div class="img-box">
+                            <img class="title-toggle_openimg pc" src="/images/images39.png" alt="料金プランかんたん診断">
+                            <!-- <img class="title-img sp" src="images/images40.png" alt="料金プランかんたん診断"> -->
+                        </div>
+                        <div id="sub_text" class="title-text">
+                            最大4つの質問に答えるだけで、<br class="sp">あなたにピッタリな料金プランをご提案！
+                        </div>
+                    </div>
+                    <!-- メインコンテンツエリア -->
+                    <div class="main-area">
+                        <div id="toggle_open" class="content toggle-open is-open"><span class="text">診断開始</span><i
+                                class="tgl-icon"></i></div>
+                        <div id="toggle_target" class="" style="visibility: visible;">
+                            <!-- 回答エリア -->
+                            <div class="q-area content">
+                                <div id="q-boxs" class="slick-initialized slick-slider">
+                                    <div aria-live="polite" class="slick-list draggable">
+                                        <div class="slick-track"
+                                            style="opacity: 1; width: 6920px; transform: translate3d(-865px, 0px, 0px);">
+                                            <div class="q-box q-pink q-index-4 slick-slide slick-cloned" data-slick-index="-1" id=""
+                                                aria-hidden="true" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">データ通信は毎月どのくらいご利用ですか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="2">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga2"></div>
+                                                            <div class="text-area main-text">
+                                                                家のWi-Fi利用が中心<br> 外出先でネットはあまり使わない
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="5">
+                                                        <div class="osusume-wrap">
+                                                            <div class="osusume">
+                                                                <div class="tri"></div>オススメ!
+                                                            </div>
+                                                        </div>
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga5"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先のSNS利用やネット閲覧が中心
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="10">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga10"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先でゲームアプリを使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="15">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga15"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先で動画を視聴しネットもよく使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="20">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga20"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先でギガ（データ量）を気にせずに使いたい
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-0 two-item slick-slide slick-current slick-active"
+                                                data-slick-index="0" aria-hidden="false" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">電話番号（090等）は必要ですか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon tell-yes"></div>
+                                                            <div class="text-area main-text">
+                                                                必要
+                                                            </div>
+                                                            <div class="sub-text">（お乗り換えの方はこちら）</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon tell-no"></div>
+                                                            <div class="text-area main-text">
+                                                                不要
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-voiceesim two-item slick-slide" data-slick-index="1"
+                                                aria-hidden="true" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">ご利用になるSIMの形状を教えてください</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon voiceesim-no"></div>
+                                                            <div class="text-area main-text">
+                                                                SIMカード
+                                                            </div>
+                                                            <div class="sub-text">（カード型）</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="2">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon voiceesim-yes"></div>
+                                                            <div class="text-area main-text">
+                                                                eSIM<sup>※</sup>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="q-anno-area">
+                                                    ※eSIMご利用にはeSIM対応機種が必要です。<br><span
+                                                        class="red">未対応の場合はご利用できませんので、「SIMカード」を選択してください。</span>
+                                                </div>
+                                                <div class="q-sup-btns">
+                                                    <a class="q-esim-btn" href="/gigaplan/esim/phone/" target="_blank">
+                                                        <img src="images/gigaSimulator2/voiceesim_btn.png" alt="音声eSIMとは？">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-1 slick-slide" data-slick-index="2" aria-hidden="true"
+                                                style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">通話定額を使いますか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="2">
+                                                        <div class="voicefree-sale osusume-wrap">
+                                                            <div class="osusume">セール</div>
+                                                        </div>
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon min5"></div>
+                                                            <div class="text-area">
+                                                                <div class="text-area-box">
+                                                                    <div class="left-box">
+                                                                        <div class="main-text fw_b">通話定額5分+</div>
+                                                                        <div class="sub-text">1回5分以内の国内通話無料</div>
+                                                                    </div>
+                                                                    <div class="right-text">
+                                                                        <div class="before-price"><span
+                                                                                class="small-text">税込</span>500<span
+                                                                                class="small-text">円</span></div>
+                                                                        <div class="normal-price"><span
+                                                                                class="small-text">税込</span>90<span
+                                                                                class="small-text">円</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="voicefree-sale osusume-wrap">
+                                                            <div class="osusume">セール</div>
+                                                        </div>
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon min10"></div>
+                                                            <div class="text-area">
+                                                                <div class="text-area-box">
+                                                                    <div class="left-box">
+                                                                        <div class="main-text fw_b">通話定額10分+</div>
+                                                                        <div class="sub-text">1回10分以内の国内通話無料</div>
+                                                                    </div>
+                                                                    <div class="right-text">
+                                                                        <div class="before-price"><span
+                                                                                class="small-text">税込</span>700<span
+                                                                                class="small-text">円</span></div>
+                                                                        <div class="normal-price"><span
+                                                                                class="small-text">税込</span>290<span
+                                                                                class="small-text">円</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="3">
+                                                        <div class="voicefree-sale osusume-wrap">
+                                                            <div class="osusume">セール</div>
+                                                        </div>
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon kakehodai"></div>
+                                                            <div class="text-area">
+                                                                <div class="text-area-box">
+                                                                    <div class="left-box">
+                                                                        <div class="main-text fw_b">かけ放題+</div>
+                                                                        <div class="sub-text">無制限で国内通話無料</div>
+                                                                    </div>
+                                                                    <div class="right-text">
+                                                                        <div class="before-price"><span
+                                                                                class="small-text">税込</span>1,400<span
+                                                                                class="small-text">円</span></div>
+                                                                        <div class="normal-price"><span
+                                                                                class="small-text">税込</span>990<span
+                                                                                class="small-text">円</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon teigaku-no"></div>
+                                                            <div class="text-area">
+                                                                <div class="text-area-box">
+                                                                    <div class="left-box">
+                                                                        <div class="main-text">通話定額は使わない</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-2 two-item slick-slide" data-slick-index="3"
+                                                aria-hidden="true" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">SMSを使いますか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon sms-yes"></div>
+                                                            <div class="text-area main-text">
+                                                                SMSを使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon sms-no"></div>
+                                                            <div class="text-area main-text">
+                                                                SMSは使わない
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-3 two-item slick-slide" data-slick-index="4"
+                                                aria-hidden="true" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">データeSIMを使いますか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon esim-yes"></div>
+                                                            <div class="text-area main-text">
+                                                                データeSIMを使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="2">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon esim-no"></div>
+                                                            <div class="text-area main-text">
+                                                                データeSIMは使わない
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="q-sup-btns">
+                                                    <a class="q-esim-btn" href="/simguide/esim/" target="_blank">
+                                                        <img src="/gigaplan/img/gigaSimulator2/esim_btn.png" alt="データeSIMとは？">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-4 slick-slide" data-slick-index="5" aria-hidden="true"
+                                                style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">データ通信は毎月どのくらいご利用ですか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="2">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga2"></div>
+                                                            <div class="text-area main-text">
+                                                                家のWi-Fi利用が中心<br> 外出先でネットはあまり使わない
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="5">
+                                                        <div class="osusume-wrap">
+                                                            <div class="osusume">
+                                                                <div class="tri"></div>オススメ!
+                                                            </div>
+                                                        </div>
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga5"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先のSNS利用やネット閲覧が中心
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="10">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga10"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先でゲームアプリを使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="15">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga15"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先で動画を視聴しネットもよく使う
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="20">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon giga20"></div>
+                                                            <div class="text-area main-text">
+                                                                外出先でギガ（データ量）を気にせずに使いたい
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="q-box q-pink q-index-0 two-item slick-slide slick-cloned"
+                                                data-slick-index="6" id="" aria-hidden="true" style="width: 865px;">
+                                                <div class="q-title">
+                                                    <div class="q-icon">Q</div>
+                                                    <span class="q-title-text">電話番号（090等）は必要ですか？</span>
+                                                </div>
+                                                <div class="q-items">
+                                                    <div class="q-item" data-value="1">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon tell-yes"></div>
+                                                            <div class="text-area main-text">
+                                                                必要
+                                                            </div>
+                                                            <div class="sub-text">（お乗り換えの方はこちら）</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="q-item" data-value="">
+                                                        <div class="q-item-text">
+                                                            <div class="q-item-icon tell-no"></div>
+                                                            <div class="text-area main-text">
+                                                                不要
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+            
+            
+            
+            
+                                </div>
+            
+                                <div class="q-move-btn-area">
+                                    <div class="q-back-btn disabled">前の設問にもどる</div>
+                                </div>
+                            </div>
+                            <!--結果表示エリア -->
+                            <div id="result_area" class="result-area content">
+                                <div class="cp-obi-area">
+                                    <div class="cp-obi">
+                                        <div class="transform-italic"><span class="cp-msg">音声限定！ 最大3ヵ月間月額300円引き<br
+                                                    class="sp">＆データ20%増量！（11/30まで）</span></div>
+                                    </div>
+                                </div>
+                                <div class="diagnosis-head">
+                                    <img class="pc" src="images/diagnosis_title_pc.png" alt="診断結果">
+                                    <!-- <img class="sp" src="images/diagnosis_title_sp.png" alt="診断結果"> -->
+                                </div>
+                                <div class="content result-list">
+                                    <div class="inner-box">
+                                        <div class="result-label pc">
+                                            <div class="label-diagnosis">診断結果</div>
+                                            <div class="label-result">合計</div>
+                                        </div>
+                                        <div class="result-detail-wrap">
+                                            <div class="use-cp-obi-area">
+                                                <div class="use-cp-obi">キャンペーン適用で最大3ヵ月間</div>
+                                            </div>
+                                            <div class="result-detail">
+                                                <div class="detail-line-sum">
+                                                    <span class="line-sum line-title">
+                                                        <span class="line-label w-back-label">回線数</span>
+                                                        <span class="line-cover"><span class="line"
+                                                                data-sync-id="line-sum">-</span><span>回線</span></span>
+                                                    </span>
+                                                </div>
+                                                <div class="detail-giga-sum">
+                                                    <span class="giga-sum line-title">
+                                                        <span class="giga-label w-back-label">データ容量</span>
+                                                        <span class="line-cover result-gb-wrap"><span data-sync-id="gb-sum"
+                                                                class="gb">-</span><span class="gb-text">GB</span></span>
+                                                    </span>
+                                                </div>
+                                                <div class="detail-price-sum">
+                                                    <span class="price-sum line-title">
+                                                        <span class="month-label w-back-label">月額</span>
+                                                        <span class="line-cover result-price-wrap"><span data-sync-id="price-sum"
+                                                                class="price">-</span><span class="yen">円</span></span>
+                                                    </span>
+                                                    <div id="breakdown_btn" class="breakdown-btn disabled">内訳</div>
+                                                </div>
+                                            </div>
+                                            <div id="breakdown_target" class="result-breakdown" style="display: none;">
+                                                <div class="breakdown-label">内訳</div>
+                                                <div class="breakdown-items" data-sync-id="breakdown-items">
+                                                    <!-- jsから追加される -->
+                                                </div>
+                                            </div>
+                                            <div class="result-anno">
+                                                <div class="monthly-discount-anno" data-sync-id="monthly-discount-anno">
+                                                    ※月額割引はご利用開始月から最大3ヵ月間適用</div>
+                                                <div class="voicegbadd-anno" data-sync-id="voicegbadd-anno">
+                                                    ※データ増量はご利用開始月から最大3ヵ月間適用</div>
+                                                <div class="voicefree-anno" data-sync-id="voicefree-anno">
+                                                    ※通話定額割引はご利用開始月から最大3ヵ月間適用</div>
+                                                <div class="gbadd-anno" data-sync-id="gbadd-anno">
+                                                    ※データ増量はご利用開始月の翌月より6ヵ月間適用</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 診断結果エリア -->
+                            <div id="diagnosis_area" class="diagnosis-area content" style="display: none;">
+                                <div class="diagnosis-title">
+                                    <div class="title-text">あなたに最適なプランはこれ！</div>
+                                    <div id="all_delete" class="delete-btn">診断結果をすべて削除</div>
+                                </div>
+                                <!-- <div class="gb-add-cp">
+                                                                                                                                                                                                                                                                                                <img src="/gigaplan/img/gigaSimulator2/simulation_campaign.png">
+                                                                                                                                                                                                                                                                                              </div> -->
+                                <div id="diagnosis_items" class="diagnosis-items">
+                                    <!-- jsで追加されるエリア -->
+                                </div>
+                                <div class="diagnosis-btns">
+                                    <div class="app-disp">
+                                        <a class="app-btn" href="/mobile/signup/">
+                                            <img class="pc" src="/gigaplan/img/btn.png" alt="ご購入・お申込みはこちら">
+                                            <img class="sp" src="/gigaplan/img/btn_sp.png" alt="ご購入・お申込みはこちら">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="anno-area content">
+                                <p>※上記費用には、SIMカード発行手数料、ユニバーサルサービス料、電話リレーサービス料は含まれておりません。</p>
+                                <p>※消費税の端数処理により実際の請求額が異なる場合があります。</p>
+                                <p>※シミュレーション結果は目安です。ご契約条件やご請求額を保証するものではありませんので、あらかじめご了承の上ご利用ください。</p>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            <template id="diagnosis_item_tpl">
+                <div class="diagnosis-item-wrap">
+                    <div class="diagnosis-item">
+                        <div class="diagnosis-detail">
+                            <div class="diagnosis-plan">
+                                <div class="plan-no" data-sync-id="plan-no">1</div>
+                                <div><img data-sync-id="plan-icon" class="plan-icon" src="/gigaplan/img/voice-icon.png" alt="">
+                                </div>
+                                <div class="plan-text"><span class="one-line"><span data-sync-id="plan"></span>
+                                        <span class="gb-prace-wrap"><span class="before-gb-prace-wrap"><span
+                                                    data-sync-id="before-gb">GB</span></span><span data-sync-id="gb"
+                                                class="gb"></span>GB</span>
+                                        <span class="month-prace-wrap"><span class="before-month-prace-wrap"><span
+                                                    data-sync-id="before-price">100</span><span class="small">円</span></span><span
+                                                class="month-label-box"><span class="small month-label">月額</span></span><span
+                                                data-sync-id="price" class="price"></span><span class="small">円</span></span><span
+                                            class="tax-label"></span><span class="small voice-option"
+                                            data-sync-id="voice-option"><span class="option-label small">通話定額</span>
+                                            <text data-sync-id="voice-option-limit"><span class="option"
+                                                    data-sync-id="voice-option-min">10</span>分<text class="pc plus">＋</text></text>
+                                            <text data-sync-id="voice-option-no-limit"><span
+                                                    class="option no-limit">かけ放題</span><text class="pc plus">＋</text></text>
+                                        </span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diagnosis-item-top">
+                            <div class="diagnosis-item-left">
+                                <div class="diagnosis-breakdown">
+                                    <div class="breakdown-label">内訳</div>
+                                    <div class="breakdown-items">
+                                        <div class="breakdown-item" data-sync-id="bd-item">
+                                            <!-- jsで追加される -->
+                                        </div>
+                                    </div>
+                                    <div class="diagnosis-anno">
+                                        <div class="monthly-discount-anno" data-sync-id="monthly-discount-anno">
+                                            ※月額料金割引はご利用開始月の翌月よりヵ月間適用</div>
+                                        <div class="voicegbadd-anno" data-sync-id="voicegbadd-anno">
+                                            ※キャンペーンはご利用開始月から最大ヵ月間適用</div>
+                                        <div class="voicefree-anno" data-sync-id="voicefree-anno">※通話定額割引はご利用開始月よりヵ月間適用
+                                        </div>
+                                        <div class="gbadd-anno" data-sync-id="gbadd-anno">※データ増量はご利用開始月よりヵ月間適用</div>
+                                    </div>
+                                </div>
+                                <div class="cp-link-list">
+                                    <div class="cp-link-list-title">適用キャンペーン</div>
+                                    <div class="links">
+                                        <div class="link-item monthly-discount-link"><a class="ar_link" href="#"
+                                                data-sync-id="monthly-discount-link">【音声SIM月額割引特典】</a></div>
+                                        <div class="link-item voicegbadd-cp-link"><a class="ar_link" href="#"
+                                                data-sync-id="voicegbadd-link">ゴーゴーキャンペーン【データ増量】</a></div>
+                                        <div class="link-item voicefree-cp-link"><a class="ar_link" href="#"
+                                                data-sync-id="voicefree-link">【通話定額オプション割引特典】</a></div>
+                                        <div class="link-item gbadd-cp-link"><a class="ar_link" href="#"
+                                                data-sync-id="gbadd-link">【データ増量】</a></div>
+                                    </div>
+                                </div>
+                            </div>
+            
+            
+                            <div class="diagnosis-recommended">
+                                <div class="recommended-text">
+                                    <div class="recommended-label">こんな方にオススメ！</div>
+                                    <div class="inner-box">
+                                        <ul class="recommended-list" data-sync-id="recommended-list">
+                                            <!-- jsで追加される-->
+                                        </ul>
+                                        <div class="recommended-img">
+                                            <img data-sync-id="persona-img" src="/gigaplan/img/gigaSimulator2/esim_2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommended-guideline">
+                            <div class="guideline-label">このデータ量の利用目安<span style="font-weight: bold;"
+                                    data-sync-id="gideline-gb"></span></div>
+                            <ul class="guideline-list">
+                                <!-- <li>・Youtube動画<span class="annotation">※1</span>：<span data-sync-id="youtube"></span></li> -->
+                                <li>・ホームページ閲覧<span class="annotation">※1</span>：<span data-sync-id="homepage"></span>
+                                </li>
+                                <li>・Twitter<span class="annotation">※2</span>：<span data-sync-id="twitter"></span></li>
+                                <li>・IP電話<span class="annotation">※3</span>：<span data-sync-id="ipPhone"></span></li>
+                            </ul>
+                            <div class="annotation-text">
+                                ※1 ホームページ閲覧：Yahoo!トップページ（モバイル版）を表示／※2 Twitter：公式アプリで全角140文字でツイート後リロードする／※3
+                                IP電話：Skypeを使用し通話<br>
+                                ※弊社で独自に調査した結果であり、常にそのデータ量で利用できることを保証するものではありません。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diagnosis-item-btns">
+                        <div class="add-line-disp">
+                            <div class="no-add-text">IIJmioのご契約は最大10回線までです。<br>追加で診断を行う場合は「診断結果の内訳」欄からプランを削除してください。
+                            </div>
+                            <div class="add-line-btn">
+                                <textedit data-sync-id="next-index">-</textedit>人目を診断する
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            
+            <template id="bd_item_tpl">
+                <div class="breakdown-item">
+                    <div class="price-no-area">
+                        <div class="plan-no" data-sync-id="plan-no">1</div>
+                    </div>
+                    <div class="price-detail"></div>
+                    <div class="delete-btn-area">
+                        <div data-sync-id="line-delete" class="delete-btn"><span class="pc">削除</span></div>
+                    </div>
+                </div>
+            </template>
+            <template id="bd_line_tpl">
+                <div class="line">
+                    <div class="left bd-name" data-sync-id="line-name"></div>
+                    <div class="right">
+                        <span><span class="line-gb-prace"><span data-sync-id="line-gb-price" class="price"></span></span></span>
+                        <span><span class="line-before-price"><span data-sync-id="line-before-price">200</span>円</span><span
+                                class="normal"><span class="tax-in-label">税込</span><span data-sync-id="line-price"
+                                    class="price"></span>円</span></span>
+                    </div>
+                </div>
+            </template>
+            <template id="recommende_list_item_tpl">
+                <li><span class="dot">●</span><span data-sync-id="recommended-text"></span></li>
+            </template>
+            <!-- <script src="/gigaplan/js/gigaSimulator2.js"></script> -->
+            <!-- 申し込みボタン -->
+            <section id="btn_area">
+                <section class="">
+                    <div class="application-btn lazyshow">
+                        <a href="/mobile/signup/"><strong>ギガプランのご購入・<br class="sp">お申し込みはこちら</strong></a>
+                    </div>
+                    <div class="anno-link Period" start="20200728" end="20220601" style="display: none;">
+                        <a class="ar_link" href="/hdd/signup/">ミニマムスタート・ライトスタート・ファミリーシェア・ケータイプランをお申し込みの方はこちら</a>
+                    </div>
+                    <div class="anno-link notPeriod" end="20220601" style="display: block;">
+                        <a class="ar_link" href="/hdd/signup/">ミニマムスタート・ライトスタート・ファミリーシェアプランをお申し込みの方はこちら</a>
+                    </div>
+                </section>
+            </section>
+            <!-- バナーエリア -->
+            <!-- <div id="gigaplanBanner"></div> -->
+            <div id="bnr_area">
+                <div class="bnr-box">
+                    <div class="bnr-item">
+            <style>
+                .cp_bnr_area .campaign_bnr {
+                    margin-top: 1rem;
+                }
+            
+                .campaign_bnr {
+                    max-width: 960px;
+                    margin: auto;
+                }
+            
+                .gigaplan-banner-date {
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 0 0 10px;
+                }
+            
+                .gigaplan-esim-phone-bnr {
+                    margin-bottom: 2em;
+                }
+            
+                .gigaplan-hikaku-bnr {
+                    margin: 2em auto;
+                }
+            </style>
+            <cp-tag class="Period" cp-name="simcp" style="display: none">
+                <div class="campaign_bnr">
+                    <p class="gigaplan-banner-date">＼11月30日まで／</p>
+                    <a href="/gigaplan/">
+                        <img class="sp" src="/images/banner/bnr_gigaplan_sp.png" alt="IIJmioモバイルサービス ギガプラン">
+                        <img class="pc" src="/images/banner/bnr_gigaplan.png" alt="IIJmioモバイルサービス ギガプラン">
+                        </a>
+                        </div>
+                        </cp-tag>
+                        </div>
+                        <css>
+                            <cp-tag class="Period" cp-name="simcp" style="display: none">
+                                <div class="campaign_bnr">
+                                    <p class="gigaplan-banner-date">＼11月30日まで／</p>
+                                    <a href="/gigaplan/">
+                                        <img class="sp" src="/images/banner/bnr_gigaplan_sp.png" alt="IIJmioモバイルサービス ギガプラン">
+                                        <img class="pc" src="/images/banner/bnr_gigaplan.png" alt="IIJmioモバイルサービス ギガプラン">
+                                </a>
+                            </div>
+                        </cp-tag>
+                    </div>
+                    <!-- <a class="bnr-item" href="/gigaplan/">
+                  <img class="sp" src="/image/banner/bnr_gigaplan_sp.png" alt="ギガプラン">
+                  <img class="pc" src="/image/banner/bnr_gigaplan.png" alt="ギガプラン">
+                </a> -->
+                    <a class="bnr-item" href="/imh/miowari.html">
+                        <!-- <img class="sp" src="/gigaplan/simulation/img/bnr_miowari_sp.png" alt="おうちのインターネットもスマホとセットでさらにおトク！"> -->
+                        <img class="pc" src="/images/bnr_miowari.png" alt="おうちのインターネットもスマホとセットでさらにおトク！">
+                    </a>
+                </div>
+            </div>
+            <!-- 注記 -->
+            <ul class="annotation_bottom">
+                <li>金額は全て税込で表記しています。</li>
+                <li>記載されている商品名、会社名等は各会社の商号、商標または登録商標です。本文中では™、®マークは表記しておりません。</li>
+                <li>Apple、Appleのロゴ、iPhone、iPad、iPad Pro、AppleCareは米国およびその他の国々で登録されたApple Inc.の商標です。 iPhone
+                    商標は、アイホン株式会社のライセンスに基づき使用されています。
+                    </li>
+            </ul>
+            <!-- footer注釈-->
+            <div id="footer-anno"></div>
+        </div>
+        <!-- mainArea -->
+        <!-- #footer -->
+        <div id="footer">
+            <div class="footer_body">
+                <div class="footer_main1">
+                    <div class="footer_map">
+                        <ul>
+                            <li><a href="/thissite/">このサイトのご利用について</a></li>
+                            <li class="t_blank"><a href="http://www.iij.ad.jp/securitypolicy/" target="_blank">情報セキュリティ基本方針</a>
+                            </li>
+                            <li><a href="/sitemap.html">サイトマップ</a></li>
+                            <!--<li class="t_blank"><a href="/hdd/visitors/index.html" target="_blank">外国人の方&nbsp;English</a></li>-->
+                            <li class="fl_01"><a href="/member/cancellation/">初期契約解除について</a></li>
+                        </ul>
+                        <ul>
+                            <li class="t_blank"><a href="http://www.iij.ad.jp/privacy/" target="_blank">個人情報保護ポリシー</a>
+                            </li>
+                            <li><a href="/tokusho/">「特定商取引に関する法律」「古物営業法」に基づく表示</a></li>
+                            <li class="fl_01"><a href="/contact.html">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                    <div id="pmark" class="pmark hidden">
+                        <a href="https://privacymark.jp/" target="_blank"><img src="/image/pmark.png" alt="プライバシーマーク"></a>
+                    </div>
+                    <div class="page_top">
+                        <a href="#top" id="page-top"><img src="/images/images69.png" alt="page top"></a>
+                    </div><br class="clear">
+                </div>
+                <br class="clear">
+                <div class="footer_main2">
+                    <div class="ft_smp_w">
+                        <div class="ft_logo">
+                            <a href="http://www.iij.ad.jp/" target="_blank"><img src="/images/images70.jpg" alt="IIJ"></a>
+                        </div>
+                        <div class="ft_info">
+                            <p>IIJmioは株式会社インターネットイニシアティブが提供する個人向けインターネットサービスです</p>
+                            <p class="kigyou"><a href="http://www.iij.ad.jp/company/" target="_blank">企業情報はこちら</a></p>
+                            <p class="copy">©2005-2023 Internet Initiative Japan Inc.</p>
+                            <p class="notification_number">
+                                〒102-0071　東京都千代田区富士見2-10-2　飯田橋グラン・ブルーム<br> 届出番号(電気通信事業者)：第A-16-7006号
+                                <br> 代理店届出番号：第C2002871号
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ft_img">
+                        <a id="ft_img_twitter"
+                            href="http://twitter.com/share?url=https://www.iijmio.jp/gigaplan/simulation/&amp;amp;text=%E6%96%99%E9%87%91%E3%83%97%E3%83%A9%E3%83%B3%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%E8%A8%BA%E6%96%AD%EF%BD%9C%E6%A0%BC%E5%AE%89SIM/%E6%A0%BC%E5%AE%89%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%AEIIJmio"
+                            onclick="window.open(this.href, 'twitter_tweet', 'width=550, height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1'); return false;"><img
+                                src="/images/footer-sns-icon-01.jpg" alt="twitter"></a>
+                        <a id="ft_img_hatena" href="http://b.hatena.ne.jp/append?https://www.iijmio.jp/gigaplan/simulation/"
+                            onclick="window.open(this.href, 'hatena_window', 'width=650, height=650, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+                            target="blank"><img src="/images/footer-sns-icon-02.jpg" alt="hatena"></a>
+                    </div>
+                    <div class="copy_smp pc_off">©2005-2023 Internet Initiative Japan Inc.</div>
+                </div>
+            </div>
+        </div>
+        <!-- / #footer -->
+    <!-- <div id="footer"></div>include footer -->
+
+    </div>
+    <!-- /#wrapper -->
+    <script>
+        // スクリプト内部のアンカーリンク調整
+        // 読み込みページごとに上書きで調整する
+        var pcAdjust = 60;
+        var spAdjust = 0;
+        // 初期処理後に表示したいので一時的に非表示にする
+        $(".mainArea").css('opacity', '0')
+        // 開くトグルを非表示設定
+        var openBtnNone = true;
+        $(function () {
+            // 起動時に開く
+            function simuInit() {
+                setTimeout(function () {
+                    // トグルを開く
+                    $("#toggle_open").trigger('click');
+                    setTimeout(function () {
+                        // コンテンツを表示
+                        $(".mainArea").addClass('fadein')
+                    }, 500);
+                }, 500);
+            }
+            // UIパーツ読み込み
+            htmlPartsInclude('#giga_simulator', '/gigaplan/include/gigaSimulator2.html', simuInit);
+        })
+                        setTimeout(function () {
+                            $(function () {
+                                $(' a.page_link[href^="#"]').click(function () {
+                                    var speed = 1000;
+                                    var href = $(this).attr("href");
+                                    var target = $(href == "#" || href == "" ? 'html' : href);
+                                    var position = target.offset().top - 120;
+                                    if (window.matchMedia("(max-width: 640px)").matches) {
+                                        var position = target.offset().top - 80;
+                                    }
+                                    $('body,html').animate({ scrollTop: position }, speed, 'easeInOutQuint');//easeInOutQuint   easeOutQuart
+                                    return false;
+                                });
+                            });
+                        }, 3000);
+                    </script>
+
+
+    <!-- Accesstrade Tracking Tag -->
+    <!-- <script src="https://h.accesstrade.net/js/nct/lp.min.js"></script> -->
+    <!-- End Accesstrade Tracking Tag -->
+
+    <!-- START include -->
+    <!-- <script src="/gigaplan/include/gigaSimulator2.js"></script>
+    <script src="/include2/includeGoogleTagManagerBody.js"></script>
+    <script src="/include2/includeGlobalMenu.js"></script>
+    <script src="/include2/includePankuzu.js"></script>
+    <script src="/include2/includeBanner.js"></script>
+    <script src="/include2/includeFooter.js"></script> -->
+
+    <!-- END include -->
+    <!-- <script src="/script/cptagname.js"></script>
+                        <script src="/script/cptag.js"></script> -->
+
+<style>
+    /* 共通 */
+
+    .notification {
+        background-color: hsl(0, 0%, 28%);
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.42857;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .notification a {
+        text-decoration: underline;
+        text-decoration-color: #fff;
+        text-underline-offset: 2px;
+    }
+
+    .notification span {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    /* PC */
+
+    /* @media screen and (min-width: 641px) {
+        truncated 1851bytes... */
+</style>
+
+<div class="krkr-64774f7af046eabe5ca49e11-64774f7af046eabe5ca49e19">
+    <div class="krkr-popup-icon-wrapper"
+        style="right: 12px; bottom: 12px; width: 80px; height: 80px; opacity: 1; visibility: visible; transition: opacity 0.2s ease-in-out 0s, visibility 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s;">
+        <div class="krkr-popup-v2__icon krkr-popup-v2__icon--right krkr-popup-v2__icon--balloon">
+            <div class="krkr-button-img krkr-popup-icon-button-image krkr-popup-icon-button-image--circle"
+                style="width: 60px; height: 60px;"><img
+                    src="https://s3.karakuri.ai/images/iijmio/card-e3c3ae35-6e8d-4ef1-bf6b-194cc383aecf.png?w=60"
+                    srcset="https://s3.karakuri.ai/images/iijmio/card-e3c3ae35-6e8d-4ef1-bf6b-194cc383aecf.png?w=120 2x,https://s3.karakuri.ai/images/iijmio/card-e3c3ae35-6e8d-4ef1-bf6b-194cc383aecf.png?w=180 3x,https://s3.karakuri.ai/images/iijmio/card-e3c3ae35-6e8d-4ef1-bf6b-194cc383aecf.png?w=240 4x">
+            </div>
+        </div>
+        <div class="krkr-popup-v2__balloon krkr-popup-v2__balloon--right"
+            style="background-color: rgb(23, 71, 145); width: 560px;">
+            <p class="krkr-popup-icon-balloon-message krkr-popup-icon-balloon-message--long"
+                style="color: rgb(255, 255, 255);">他社からの乗り換え（MNP転入)についてご案内します。</p>
+            <div class="krkr-popup-v2__balloon-close-button krkr-popup-v2__balloon-close-button--right"><button
+                    type="button"
+                    class="krkr-popup-icon-balloon-close-button krkr-popup-icon-balloon-close-button--plain"><svg
+                        width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.946 10.0033C11.2066 10.2641 11.2066 10.6853 10.946 10.9461C10.8159 11.0761 10.6453 11.1414 10.4745 11.1414C10.3039 11.1414 10.1332 11.0761 10.0032 10.9461L7.99991 8.94266L5.99661 10.9461C5.86661 11.0761 5.69595 11.1414 5.5253 11.1414C5.35452 11.1414 5.18387 11.0761 5.05386 10.9461C4.79324 10.6853 4.79324 10.2641 5.05386 10.0033L7.05728 8.00003L5.05386 5.99673C4.79324 5.73599 4.79324 5.31473 5.05386 5.05399C5.31461 4.79337 5.73587 4.79337 5.99661 5.05399L7.99991 7.0574L10.0032 5.05399C10.2639 4.79337 10.6852 4.79337 10.946 5.05399C11.2066 5.31473 11.2066 5.73599 10.946 5.99673L8.94254 8.00003L10.946 10.0033Z">
+                        </path>
+                    </svg></button></div>
+        </div>
+    </div>
+</div>
+<div></div>
+<div id="batBeacon974641008024" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img
+        id="batBeacon766723089586" width="0" height="0" alt=""
+        src="https://bat.bing.com/action/0?ti=187023883&amp;tm=gtm002&amp;Ver=2&amp;mid=20b389b9-867a-4c22-afdb-be75ce36b2ae&amp;sid=b598e2e06f0b11eebb8635d3336c0683&amp;vid=b598ff306f0b11eea78399f722f8a8f9&amp;vids=0&amp;msclkid=N&amp;gtm_tag_source=1&amp;pi=918639831&amp;lg=ja-JP&amp;sw=1920&amp;sh=1200&amp;sc=30&amp;tl=%E6%96%99%E9%87%91%E3%83%97%E3%83%A9%E3%83%B3%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%E8%A8%BA%E6%96%AD%EF%BD%9C%E6%A0%BC%E5%AE%89SIM%2F%E6%A0%BC%E5%AE%89%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%AEIIJmio&amp;p=https%3A%2F%2Fwww.iijmio.jp%2Fgigaplan%2Fsimulation%2F&amp;r=https%3A%2F%2Fwww.iijmio.jp%2Fgigaplan%2Fsimulation%2F&amp;lt=1094&amp;evt=pageLoad&amp;sv=1&amp;rn=872437"
+        style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
+<iframe src="https://spdmg-backend.i-mobile.co.jp/adv.aspx?sid=23349&amp;cq=top=1" name="gdm_advFrame" frameborder="0"
+    scrolling="no" width="0" height="0" marginwidth="0" marginheight="0" vspace="0" hspace="0"
+    style="visibility: hidden; padding: 0px; display: none;"></iframe>
+</body>
+<iframe id="__JSBridgeIframe_1.0__" title="jsbridge___JSBridgeIframe_1.0__" style="display: none;"></iframe><iframe
+    id="__JSBridgeIframe_SetResult_1.0__" title="jsbridge___JSBridgeIframe_SetResult_1.0__"
+    style="display: none;"></iframe><iframe id="__JSBridgeIframe__" title="jsbridge___JSBridgeIframe__"
+    style="display: none;"></iframe><iframe id="__JSBridgeIframe_SetResult__"
+    title="jsbridge___JSBridgeIframe_SetResult__" style="display: none;"></iframe>
+
+</html>

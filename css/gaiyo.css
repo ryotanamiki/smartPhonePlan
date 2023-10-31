@@ -1,0 +1,462 @@
+.inc_gaiyo a.link_bl,
+.inc_faq a.link_bl {
+    background: url(/campaign/share_no1/img/link_bl.png) left center no-repeat;
+    background-size: 11px;
+    padding: 0 0 0 12px;
+    color: #e75096;
+}
+
+.inc_gaiyo a.ar_link,
+.inc_faq a.ar_link {
+    background: url(/image/ar-icon.png) no-repeat;
+    padding-left: 15px;
+    background-position: 0 2px;
+}
+
+.inc_gaiyo {
+    background: #fdfcf8;
+    padding: 30px 0 40px;
+}
+
+.inc_gaiyo h2 {
+    width: 90%;
+    margin: 0px auto;
+    padding: 55px 0 10px 0;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.inc_gaiyo-body {
+    display: block;
+    width: 90%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* アンカーリンク対応のためネガティブマージン設定しています */
+.inc_gaiyo-body h3 {
+    width: 100%;
+    margin: 10px 0 0 0px;
+    padding: 5px 0px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    background: #3f64ab;
+    color: #fff;
+    text-align: center;
+}
+
+.inc_gaiyo-body h3 p {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.inc_gaiyo-body h3 p span {
+    display: inline-block;
+}
+
+.inc_gaiyo-body h5 {
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+}
+
+.inc_gaiyo-body .overview_restock {
+    background: #F075B8;
+    padding: 0 2px 0 8px;
+}
+
+.inc_gaiyo-body table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-bottom: solid 1px #cecece;
+    box-sizing: border-box;
+}
+
+.inc_gaiyo-body table th {
+    width: 135px;
+}
+
+.inc_gaiyo-body table th,
+.inc_gaiyo-body table td {
+    padding: 15px 20px;
+    border-top: #cecece solid 1px !important;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.inc_gaiyo-body table th {
+    background: #f7f7f6;
+}
+
+.inc_gaiyo-body table td .dev_name {
+    font-weight: bold;
+    position: relative;
+    padding-left: 15px;
+}
+
+.inc_gaiyo-body table td .dev_name::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #999;
+    display: inline-block;
+    margin-right: 5px;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+}
+
+.inc_gaiyo-body .disclist {
+    padding-left: 1em;
+}
+
+.inc_gaiyo-body .disclist li {
+    list-style-type: disc;
+}
+
+@media screen and (max-width: 640px) {
+    .inc_gaiyo {
+        padding: 0px 0 8% 0;
+    }
+
+    .inc_gaiyo h2 {
+        padding-bottom: 0;
+    }
+
+    .inc_gaiyo-body h2 {
+        width: 90%;
+        margin: 0px auto;
+        padding: 55px 0 30px 0;
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .inc_gaiyo-body table th {
+        width: 60px;
+    }
+
+    .inc_gaiyo-body table th,
+    .inc_gaiyo-body table td {
+        padding: 15px 10px;
+        border-top: #cecece solid 1px !important;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+.inc_gaiyo-body table.table2 {
+    margin: 0 0 10px 0;
+    border-left: solid 1px #cecece;
+    box-sizing: border-box;
+}
+
+.inc_gaiyo-body table.table2 thead th {
+    text-align: center;
+    padding: 7px 20px;
+    border-right: solid 1px #cecece;
+    background: #eee;
+}
+
+.inc_gaiyo-body table.table2 tbody th,
+.inc_gaiyo-body table.table2 tbody td {
+    text-align: center;
+    padding: 12px 20px;
+    border-right: solid 1px #cecece;
+}
+
+@media screen and (max-width: 640px) {
+    .inc_gaiyo-body table.table2 thead th {
+        text-align: center;
+        padding: 7px 5px;
+        border-right: solid 1px #cecece;
+        background: #eee;
+    }
+
+    .inc_gaiyo-body table.table2 tbody th,
+    .inc_gaiyo-body table.table2 tbody td {
+        text-align: center;
+        padding: 10px 5px;
+        border-right: solid 1px #cecece;
+    }
+}
+
+.inc_faq {
+    padding: 30px 0 30px 0;
+    background: #fdfcf8;
+}
+
+.inc_faq.no1_QA2 {
+    padding: 0px 0 50px 0;
+}
+
+.inc_faq h2 {
+    width: 90%;
+    margin: 0px auto;
+    padding: 55px 0 20px 0;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.inc_faq-item {
+    padding-top: 20px;
+}
+
+.inc_faq-item .inner2 {
+    margin-top: 60px;
+}
+
+.inc_faq-item h3 {
+    width: 90%;
+    max-width: 920px;
+    margin: 0px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    background: #3f64ab;
+    color: #fff;
+    text-align: center;
+}
+
+.inc_faq-item h3 p {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.inc_faq-item h3 p span {
+    display: inline-block;
+}
+
+@media screen and (max-width: 640px) {
+    .inc_faq-item h3 {
+        width: 90%;
+        max-width: 920px;
+        margin: 0px auto;
+        padding: 10px 10px;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: bold;
+        background: #3f64ab;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.inc_faq h4 {
+    width: 100%;
+    margin: 20px 0 0 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    background: #e75096;
+    color: #fff;
+}
+
+.inc_faq-item .faq_inner {
+    display: block;
+    width: 95%;
+    max-width: 920px;
+    margin: 0px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inc_faq-item .faq_inner dl {
+    width: 100%;
+    list-style-type: none;
+    display: block;
+    padding: 20px;
+}
+
+.inc_faq-item .faq_inner dl:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+.inc_faq-item .faq_inner dl:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.inc_faq-item .faq_inner dl dt {
+    width: 30px;
+    float: left;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    list-style-type: none;
+    padding: 0px 0;
+    text-align: left;
+    clear: both;
+}
+
+.inc_faq-item .faq_inner dl dd {
+    width: 97%;
+    float: left;
+    margin-left: -30px;
+    padding: 0px 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.inc_faq-item .faq_inner dl dd p {
+    margin-left: 30px;
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.inc_faq-item .faq_inner dl dt.q {
+    color: #00baef;
+}
+
+.inc_faq-item .faq_inner dl dt.a {
+    color: #f03a8a;
+}
+
+.campaign-anno {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+
+    /*.inc_faq{ padding: 30px 0 10% 0; }*/
+    .inc_faq {
+        padding: 0px 0 8% 0;
+    }
+
+    .inc_faq h2 {
+        width: 90%;
+        margin: 0px auto;
+        padding: 55px 0 10px 0;
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .inc_faq-item .faq_inner dl {
+        width: 100%;
+        list-style-type: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .inc_faq-item .inc_faq-itemh4 {
+        width: 100%;
+        margin-left: -10px;
+        padding: 6px 10px;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: bold;
+        background: #e75096;
+        color: #fff;
+    }
+
+    .campaign-anno {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.inc_faq-item .q {
+    color: #1fbbed;
+}
+
+.inc_faq-item .a {
+    color: #ed3f8a;
+}
+
+.mio_finish {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+.mio-togglebtn {
+    text-align: center;
+    background: #DDD;
+    padding: 1em;
+    border: 1px solid #999;
+    user-select: none;
+    cursor: pointer;
+}
+
+.md_look {
+    background-color: #ffcccc;
+    padding: 0 .5rem;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .mio_finish {
+        color: red;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .inc_gaiyo-body h3.ac-gaiyo-title p {
+        padding-left: 28px;
+        box-sizing: border-box;
+    }
+}
+
+/* toggle用 */
+.ac-gaiyo-title {
+    position: relative;
+    cursor: pointer;
+}
+
+.ac-gaiyo-title:hover {
+    opacity: .7;
+}
+
+.ac-gaiyo-title.open::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ac-gaiyo-title::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: #FFF;
+    position: absolute;
+    left: 10px;
+    top: 48%;
+    transform: translateY(-50%);
+    transition: all 300ms 0s ease;
+}
+
+.ac-gaiyo-title.open::after {
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.ac-gaiyo-title::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: #FFF;
+    position: absolute;
+    left: 10px;
+    top: 48%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 300ms 0s ease;
+}
