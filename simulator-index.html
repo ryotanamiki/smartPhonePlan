@@ -416,31 +416,42 @@
                             <div id="toggle_target" class="" style="visibility: visible;">
                                 <!-- 回答エリア -->
                                 <div class="q-area content">
-                                    <div class="question-container" v-if="currentQuestionIndex !== questions.length">
-                                        <transition name="slide-fade">
-                                            <div class="question">
-                                                <div class="q-icon">Q</div>
-                                                <div class="title">{{ currentQuestion.text }}</div>
-                                            </div>
-                                        </transition>
-                                        <div class="answers">
-                                            <div class="answer" v-for="answer in currentQuestion.answers"
-                                                :key="answer.id">
-                                                <button @click="selectAnswer(answer)" class="answerButton">
-                                                    <div class="answer-icon">
-                                                        <img :src="answer.icon" alt="Icon">
-                                                    </div>
-                                                    <div class="answer-text">
-                                                        {{ answer.number }}{{ answer.text }}{{ answer.texts }}{{ answer.min }}<br>
-                                                        <div class="subText">{{ answer.subText }}</div>
-                                                        <div class="thirdText">{{ answer.thirdText }}
-                                                            <div class="clearLine">{{ answer.line }}</div>
-                                                        </div>
-                                                        <div class="fourthText">{{ answer.fourthText }}{{ answer.number2 }}{{ answer.yen }}</div>
-                                                        <div class="gigaText">{{ answer.gigaText }}</div>
-                                                    </div>
-                                                </button>
-                                            </div>
+                                    <div class="question-container">
+                                        <div class="questionContainer" v-if="status === 1">
+                                            <h2>電話番号（090等）は必要ですか？</h2>
+                                            <button @click="q1('yes')">使う</button>
+                                            <button @click="q1('no')">不要</button>
+                                        </div>
+                                        <div class="questionContainer" v-if="status === 2">
+                                            <h2>ご利用になるSIMの形状を教えてください</h2>
+                                            <button @click="q2(1)">SIMカード</button>
+                                            <button @click="q2(2)">eSIM</button>
+                                        </div>
+                                        <div class="questionContainer" v-if="status === 3">
+                                            <h2>SMSを使いますか？</h2>
+                                            <button @click="q3('yes')">SMSを使う</button>
+                                            <button @click="q3('no')">SMSは使わない</button>
+                                        </div>
+                                        <div class="questionContainer" v-if="status === 4">
+                                            <h2>データeSIMを使いますか？</h2>
+                                            <button @click="q4('yes')">データeSIMを使う</button>
+                                            <button @click="q4('no')">データeSIMを使わない
+                                            </button>
+                                        </div>
+                                        <div class="questionContainer" v-if="status === 5">
+                                            <h2>通話定額を使いますか？</h2>
+                                            <button @click="q5(1)">通話定額5分+</button>
+                                            <button @click="q5(2)">通話定額10分+</button>
+                                            <button @click="q5(3)">かけ放題</button>
+                                            <button @click="q5(4)">通話定額は使わない</button>
+                                        </div>
+                                        <div class="questionContainer" v-if="status === 6">
+                                            <h2>データ通信は毎月どのくらいご利用ですか？</h2>
+                                            <button @click="q6(1)">家のWi-Fi利用が中心<br> 外出先でネットはあまり使わない</button>
+                                            <button @click="q6(2)">外出先のSNS利用やネット閲覧が中心</button>
+                                            <button @click="q6(3)">外出先でゲームアプリを使う</button>
+                                            <button @click="q6(4)">外出先で動画を視聴しネットもよく使う</button>
+                                            <button @click="q6(5)">外出先でギガ（データ量）を気にせずに使いたい</button>
                                         </div>
                                         <div class="back-button">
                                             <div class="goBack" @click="goBack">前の設問にもどる</di>
@@ -520,7 +531,7 @@
                                         </div>
                                     </div>
                                     <!-- 診断結果エリア -->
-                                    <div id="diagnosis_area" class="diagnosis-area content">
+                                    <div id="diagnosis_area" class="diagnosis-area" v-show="showingBreakdown">
                                         <div class="diagnosis-title">
                                             <div class="title-text">あなたに最適なプランはこれ！</div>
                                             <div id="all_delete" class="delete-btn">診断結果をすべて削除</div>
@@ -931,155 +942,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-        const app = new Vue({
-            el: '#app',
-            data: {
-                selectedAnswer: [],
-                selectedGiga: '',
-                selectedPrice: '',
-                answerImg: '',
-                resultAnswers: [],
-                currentQuestionIndex: 0,
-                showingBreakdown: false,
-                selectedPlan: null,
-                hpTimes: '',
-                telTimes: '',
-                resultSim: '',
-                resultPrice: '',
-                resultTell: '',
-                questions: [
-                    {
-                        text: '電話番号（090等）は必要ですか？',
-                        answers: [
-                            { id: 1, text: '使う', subText: '（お乗り換えの方はこちら）', icon: '/images/images46.png' },
-                            { id: 2, text: '使わない', subText: '', icon: '/images/images47.png' }
-                        ],
-                    },
-                    {
-                        text: 'ご利用になるSIMの形状を教えてください',
-                        answers: [
-                            { id: 1, texts: 'SIMカード', subText: '（カード型）', icon: 'images/icon_voiceesim_no_on.png' },
-                            { id: 2, texts: 'eSIM', subText: '', icon: 'images/icon_voiceesim_yes_on.png' }
-                        ]
-                    },
-                    {
-                        text: 'SMSを使いますか？',
-                        answers: [
-                            { id: 1, texts: 'SMSを使う', icon: 'images/images55.png' },
-                            { id: 2, texts: 'SMSは使わない', icon: 'images/images56.png' },
-                        ],
-                    },
-                    {
-                        text: 'データeSIMを使いますか？',
-                        answers: [
-                            { id: 1, texts: 'データeSIMを使う', icon: 'images/images57.png' },
-                            { id: 2, texts: 'データeSIMは使わない', icon: 'images/images58.png' },
-                        ],
-                    },
-                    {
-                        text: '通話定額を使いますか？',
-                        answers: [
-                            { id: 1, text: '通話定額', min: '5分 +', subText: '1日5分以内の国内通話無料', thirdText: '税込500円', fourthText: '税込', number2: '90', yen: '円', line: 'ーーーーー', icon: 'images/images51.png' },
-                            { id: 2, text: '通話定額', min: '10分 +', subText: '1日10分以内の国内通話無料', thirdText: '税込700円', fourthText: '税込', number2: '290', yen: '円', line: 'ーーーーー', icon: 'images/images52.png' },
-                            { id: 3, text: 'かけ放題 +', min: 'かけ放題 +', subText: '無制限で国内通話無料', thirdText: '税込1,400円', fourthText: '税込', number2: '990', yen: '円', line: 'ーーーーー', icon: 'images/images53.png' },
-                            { id: 4, text: '通話定額は使わない', subText: '', thirdText: '', fourthText: '', icon: 'images/images54.png' },
-                        ],
-                    },
-                    {
-                        text: 'データ通信は毎月どのくらいご利用ですか？',
-                        answers: [
-                            { id: 1, number: '2', text: 'ギガ', gigaText: 'いいえのWi-Fi利用が中心　外出先でネットはあまり使わない', icon: 'images/images41.png', img: 'images/gigavoiceesim_2.png', hp: '約6.820回', tw: '約22,500回', tel: '約58時間', gigaPrice: '550' },
-                            { id: 2, number: '5', text: 'ギガ', gigaText: '外出先のSNS利用やネット閲覧が中心', icon: 'images/images42.png', img: 'images/gigavoiceesim_5.png', hp: '約17,050回', tw: '約56,250回', tel: '約145時間', gigaPrice: '690'  },
-                            { id: 3, number: '10', text: 'ギガ', gigaText: '外出先でゲームアプリを使う', icon: 'images/images43.png', img: 'images/gigavoiceesim_10.png', hp: '約34,100回', tw: '約112,500回', tel: '約290時間', gigaPrice: '1200'  },
-                            { id: 4, number: '15', text: 'ギガ', gigaText: '外出先で動画を視聴しネットもよく使う', icon: 'images/images44.png', img: 'images/gigavoiceesim_15.png', hp: '約51,150回', tw: '約168,750回', tel: '約436時間', gigaPice: '1500' },
-                            { id: 5, number: '20', text: 'ギガ', gigaText: '外出先でギガ（データ量）を気にせずに使いたい', icon: 'images/images44.png', img: 'images/gigavoiceesim_20.png', hp: '約68,200回', tw: '約225,00回', tel: '約8 ', gigaPrice: '1700' },
-                        ],
-                    },
-                ],
-                plans: [
-                    { name: 'プランA', price: 1000, basePrice: 800, dataPlan: 10 },
-                    { name: 'プランB', price: 1200, basePrice: 900, dataPlan: 15 },
-                    // Define more plans
-                ]
-            },
-            computed: {
-                currentQuestion() {
-                    return this.questions[this.currentQuestionIndex];
-                },
-                result() {
-                    const currentAnswer = this.selectedAnswer
-                    this.resultSim = answer.texts;
-                    this.resultPrice = answer.number2 + answer.gigaPrice;
-                    this.resultTell = answer.min;
 
-                    return {
-                        resultSim,
-                        resultPrice,
-                        resultTell
-                    };
-                },
-            },
-            methods: {
-                selectAnswer(answer) {
-                    this.selectedGiga = answer.number;
-                    this.selectedPrice = answer.number2;
-                    if (this.currentQuestionIndex === 0) {
-                        if (answer.id === 1) {
-                            this.currentQuestionIndex = 1;  // Move to "ご利用になるSIMカードの形状を教えてください"
-                        } else if (answer.id === 2) {
-                            this.currentQuestionIndex = 2;  // Move to "SMSを使いますか？"
-                        }
-                    } else if (this.currentQuestionIndex === 1) {
-                        this.currentQuestionIndex = 4;
-                    } else if (this.currentQuestionIndex === 2) {
-                        if (answer.id === 1) {
-                            this.currentQuestionIndex = 4;  // Move to "通話定額を使いますか？"
-                        } else if (answer.id === 2) {
-                            this.currentQuestionIndex = 3;  // Move to "データ通信は毎月どのくらいご利用ですか？"
-                        }
-                    } else if (this.currentQuestionIndex === 3) {
-                        if (answer.id === 1) {
-                            this.currentQuestionIndex = 4;  // Move to "データ通信は毎月どのくらいご利用ですか？"
-                        } else if (answer.id === 2) {
-                            this.currentQuestionIndex = 5;  // Move to "通話定額を使いますか？"
-                        }
-                    } else if (this.currentQuestionIndex === 4) {
-                        this.currentQuestionIndex = 5;  // Move to "データ通信は毎月どのくらいご利用ですか？"
-                    }
-                    if (this.currentQuestionIndex === this.questions.length - 1) {
-                        this.selectedPlan = this.calculatePlan();
-                        this.answerImg = answer.img;
-                    }
-                    this.resultAnswers.push(this.currentQuestionIndex);
-                },
-                goBack() {
-                    if (this.resultAnswers.length > 0) {
-                        const previousQuestionIndex = this.resultAnswers.pop();
-                        if(this.resultAnswers.length > 0) {
-                            this.currentQuestionIndex = this.resultAnswers[this.resultAnswers.length - 1];
-                        } else {
-                            this.currentQuestionIndex = 0;
-                        }
-                    }
-
-                },
-                calculatePlan() {
-                    // Calculate the plan based on user's answers
-                    // Replace with y            our logic
-                    return this.plans[0];
-                },
-                showBreakdown() {
-                    this.showingBreakdown = true;
-                }
-            },
-            watch: {
-                selectedAnswer: function (newAnswer) {
-                    this.computedResults = newAnswer;
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
